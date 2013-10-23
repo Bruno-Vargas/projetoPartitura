@@ -5,18 +5,28 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>D755C842-A626-44CE-AACF-2883C55C1AD8</string>
+=======
+	<string>DD93B46C-80AB-4274-B440-29EF8CC167BC</string>
+>>>>>>> d7a3086553ba01a98936939ee45922e9cac5fad2
 	<key>IDESourceControlProjectName</key>
 	<string>TesteGithub</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>0A471C1E-9232-44E7-8E98-1DDDF4D11CEB</key>
 		<string>https://github.com/Bruno-Vargas/projetoPartitura.git</string>
+=======
+		<key>99633F3E-AA52-4B5D-A796-8B2840269BF4</key>
+		<string>https://github.com/rrovaron/projetoPartitura.git</string>
+>>>>>>> d7a3086553ba01a98936939ee45922e9cac5fad2
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>TesteGithub/TesteGithub.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>0A471C1E-9232-44E7-8E98-1DDDF4D11CEB</key>
 		<string>../../..</string>
 	</dict>
@@ -26,13 +36,28 @@
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
 	<string>0A471C1E-9232-44E7-8E98-1DDDF4D11CEB</string>
+=======
+		<key>99633F3E-AA52-4B5D-A796-8B2840269BF4</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rrovaron/projetoPartitura.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>99633F3E-AA52-4B5D-A796-8B2840269BF4</string>
+>>>>>>> d7a3086553ba01a98936939ee45922e9cac5fad2
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+<<<<<<< HEAD
 			<string>0A471C1E-9232-44E7-8E98-1DDDF4D11CEB</string>
+=======
+			<string>99633F3E-AA52-4B5D-A796-8B2840269BF4</string>
+>>>>>>> d7a3086553ba01a98936939ee45922e9cac5fad2
 			<key>IDESourceControlWCCName</key>
 			<string>projetoPartitura</string>
 		</dict>
