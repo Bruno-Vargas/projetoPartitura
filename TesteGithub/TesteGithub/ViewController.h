@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIImageView *proxNota;
+@property (strong, nonatomic) IBOutlet UIImageView *nota;
+@property (strong, nonatomic) IBOutlet UIImageView *antNota;
 
+- (IBAction)start:(id)sender;
 @end

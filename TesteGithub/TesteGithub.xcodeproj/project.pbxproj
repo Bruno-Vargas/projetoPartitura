@@ -21,7 +21,6 @@
 		F9D3899E1818277F009389F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D389801818277F009389F8 /* UIKit.framework */; };
 		F9D389A61818277F009389F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9D389A41818277F009389F8 /* InfoPlist.strings */; };
 		F9D389A818182780009389F8 /* TesteGithubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D389A718182780009389F8 /* TesteGithubTests.m */; };
-		F9D389B2181829D0009389F8 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D389B1181829D0009389F8 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		F9D389A31818277F009389F8 /* TesteGithubTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TesteGithubTests-Info.plist"; sourceTree = "<group>"; };
 		F9D389A51818277F009389F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F9D389A718182780009389F8 /* TesteGithubTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TesteGithubTests.m; sourceTree = "<group>"; };
-		F9D389B1181829D0009389F8 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +82,6 @@
 		F9D389701818277F009389F8 = {
 			isa = PBXGroup;
 			children = (
-				F9D389B1181829D0009389F8 /* Storyboard.storyboard */,
 				F9D389821818277F009389F8 /* TesteGithub */,
 				F9D389A11818277F009389F8 /* TesteGithubTests */,
 				F9D3897B1818277F009389F8 /* Frameworks */,
@@ -232,7 +229,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9D389951818277F009389F8 /* Images.xcassets in Resources */,
-				F9D389B2181829D0009389F8 /* Storyboard.storyboard in Resources */,
 				F9D389871818277F009389F8 /* InfoPlist.strings in Resources */,
 				F9D389901818277F009389F8 /* Main.storyboard in Resources */,
 			);
@@ -464,6 +460,7 @@
 				F9D389AD18182780009389F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9D389AE18182780009389F8 /* Build configuration list for PBXNativeTarget "TesteGithubTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +469,7 @@
 				F9D389B018182780009389F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
