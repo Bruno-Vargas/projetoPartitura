@@ -11,17 +11,41 @@
 #import <Foundation/Foundation.h>
 #import "sound.h"
 
+/*
+ void vDSP_fft_zipt (
+ FFTSetup               __vDSP_Setup,
+ const DSPSplitComplex *__vDSP_C,
+ vDSP_Stride            __vDSP_IC,
+ const DSPSplitComplex *__vDSP_Buffer,
+ vDSP_Length            __vDSP_Log2N,
+ FFTDirection           __vDSP_Direction
+ );
+ Parameters
+ __vDSP_Setup
+ Points to a structure initialized by a prior call to the FFT weights array function, vDSP_create_fftsetup. The value supplied as parameter __vDSP_Log2N of the earlier call to the setup function must equal or exceed the value supplied as parameter __vDSP_Log2N of this transform function.
+ __vDSP_C
+ A complex input/output vector. Both the real and imaginary parts of this buffer must contain either the lesser of 16,384 bytes or N * sizeof *C->realp bytes and is preferably 16-byte aligned or better.
+ __vDSP_IC
+ Specifies an address stride through the input/output vector. To process every element of the vector, specify 1 for parameter stride; to process every other element, specify 2.
+ __vDSP_Buffer
+ A temporary vector used for storing interim results. The minimum size of temporary memory for each part (real and imaginary) is the lesser of the size of n elements or 16,384 bytes. If possible, bufferTemp.realp and bufferTemp.imagp should be 16-byte aligned for best performance.
+ __vDSP_Log2N
+ The base 2 exponent of the number of real elements to process. For example, to process 1024 real elements, specify 10 for parameter __vDSP_Log2N.
+ __vDSP_Direction
+ A forward/inverse directional flag, which must specify kFFTDirection_Forward for a forward transform or kFFTDirection_Inverse for an inverse transform.
+ */
+
 
 #define NUM_FILES 2                         // number of audio files read in by old method
 
 #define kDelayBufferLength 1024 * 100
 
 @interface mixerSound : NSObject <AVAudioSessionDelegate>
-@property (nonatomic) Float64   graphSampleRate;                // audio graph sample rate
-CFURLRef                        sourceURLArray[NUM_FILES];      // for handling loop files
-@property (nonatomic)sound*     soundStruct;    // scope reference for loop file callback
+@property (nonatomic) Float64   graphSampleRate;               // audio graph sample rate
+@property (nonatomic )NSMutableArray*     sourceURLArray;      // vetor para secolocar o CFURLRef
+@property (nonatomic) NSMutableArray*     soundArray;          // vetor para se colocar o objeto sound
 
-
+-(id) initArraySound: (int) numElementos;                          // metodo para inicializar o vetor sound
 
 // Before using an AudioStreamBasicDescription struct you must initialize it to 0. However, because these ASBDs
 // are declared in external storage, they are automatically initialized to 0.

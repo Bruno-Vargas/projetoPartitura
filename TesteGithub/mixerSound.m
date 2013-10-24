@@ -10,4 +10,11 @@
 
 @implementation mixerSound
 
+-(id) initArraySound:(int)numElementos{
+    for(int i = 0; i < numElementos; i ++){
+        [self.soundArray addObject:[[sound alloc] init]];
+    }
+    
+    return self;
+}
 @end
