@@ -12,7 +12,6 @@
 		0D83134E181AE56F009FCD52 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D83134A181AE56F009FCD52 /* TPCircularBuffer.c */; };
 		0D831350181AE58E009FCD52 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D83134F181AE58E009FCD52 /* Accelerate.framework */; };
 		0D831352181AE59D009FCD52 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D831351181AE59D009FCD52 /* AudioToolbox.framework */; };
-		F98A1ABD181956180051CF8B /* mixerSound.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A1ABA181956180051CF8B /* mixerSound.m */; };
 		F98A1AC1181A87430051CF8B /* Papel pautado.png in Resources */ = {isa = PBXBuildFile; fileRef = F98A1ABF181A87430051CF8B /* Papel pautado.png */; };
 		F98A1ACB181A8B610051CF8B /* cortado.png in Resources */ = {isa = PBXBuildFile; fileRef = F98A1ACA181A8B610051CF8B /* cortado.png */; };
 		F9D3897D1818277F009389F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D3897C1818277F009389F8 /* Foundation.framework */; };
@@ -50,8 +49,6 @@
 		0D83134B181AE56F009FCD52 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPCircularBuffer.h; path = "../../../../Downloads/PitchDetectorExample-master/PitchDetectorExample/TPCircularBuffer.h"; sourceTree = "<group>"; };
 		0D83134F181AE58E009FCD52 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		0D831351181AE59D009FCD52 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		F98A1AB9181956180051CF8B /* mixerSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mixerSound.h; sourceTree = "<group>"; };
-		F98A1ABA181956180051CF8B /* mixerSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mixerSound.m; sourceTree = "<group>"; };
 		F98A1ABF181A87430051CF8B /* Papel pautado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Papel pautado.png"; sourceTree = "<group>"; };
 		F98A1ACA181A8B610051CF8B /* cortado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cortado.png; sourceTree = "<group>"; };
 		F9D389791818277F009389F8 /* TesteGithub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesteGithub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,8 +120,6 @@
 				F9D3898E1818277F009389F8 /* Main.storyboard */,
 				F9D389911818277F009389F8 /* ViewController.h */,
 				F9D389921818277F009389F8 /* ViewController.m */,
-				F98A1AB9181956180051CF8B /* mixerSound.h */,
-				F98A1ABA181956180051CF8B /* mixerSound.m */,
 				F9D389821818277F009389F8 /* TesteGithub */,
 				F9D389A11818277F009389F8 /* TesteGithubTests */,
 				F9D3897B1818277F009389F8 /* Frameworks */,
@@ -295,7 +290,6 @@
 			files = (
 				0D83134C181AE56F009FCD52 /* AudioController.m in Sources */,
 				F9D389931818277F009389F8 /* ViewController.m in Sources */,
-				F98A1ABD181956180051CF8B /* mixerSound.m in Sources */,
 				F9D3898D1818277F009389F8 /* AppDelegate.m in Sources */,
 				0D83134D181AE56F009FCD52 /* PitchDetector.m in Sources */,
 				0D83134E181AE56F009FCD52 /* TPCircularBuffer.c in Sources */,
