@@ -49,7 +49,7 @@
 
 // Before using an AudioStreamBasicDescription struct you must initialize it to 0. However, because these ASBDs
 // are declared in external storage, they are automatically initialized to 0.
-
+/*
 AudioStreamBasicDescription     stereoStreamFormat;     // standard stereo 8.24 fixed point
 AudioStreamBasicDescription     monoStreamFormat;       // standard mono 8.24 fixed point
 AudioStreamBasicDescription     SInt16StreamFormat;		// signed 16 bit int sample format
@@ -144,4 +144,4 @@ float micFxControl; // multipurpose mix fx control slider
 
 BOOL inputDeviceIsAvailable;    // indicates whether input device is available on ipod touch
 
-@end
+@end */

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F98A1ABD181956180051CF8B /* mixerSound.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A1ABA181956180051CF8B /* mixerSound.m */; };
 		F98A1ABE181956180051CF8B /* sound.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A1ABC181956180051CF8B /* sound.m */; };
+		F98A1AC1181A87430051CF8B /* Papel pautado.png in Resources */ = {isa = PBXBuildFile; fileRef = F98A1ABF181A87430051CF8B /* Papel pautado.png */; };
+		F98A1ACB181A8B610051CF8B /* cortado.png in Resources */ = {isa = PBXBuildFile; fileRef = F98A1ACA181A8B610051CF8B /* cortado.png */; };
 		F9D3897D1818277F009389F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D3897C1818277F009389F8 /* Foundation.framework */; };
 		F9D3897F1818277F009389F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D3897E1818277F009389F8 /* CoreGraphics.framework */; };
 		F9D389811818277F009389F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D389801818277F009389F8 /* UIKit.framework */; };
@@ -40,6 +42,8 @@
 		F98A1ABA181956180051CF8B /* mixerSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mixerSound.m; sourceTree = "<group>"; };
 		F98A1ABB181956180051CF8B /* sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sound.h; sourceTree = "<group>"; };
 		F98A1ABC181956180051CF8B /* sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sound.m; sourceTree = "<group>"; };
+		F98A1ABF181A87430051CF8B /* Papel pautado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Papel pautado.png"; sourceTree = "<group>"; };
+		F98A1ACA181A8B610051CF8B /* cortado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cortado.png; sourceTree = "<group>"; };
 		F9D389791818277F009389F8 /* TesteGithub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesteGithub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D3897C1818277F009389F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F9D3897E1818277F009389F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F98A1AC3181A89110051CF8B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F98A1ACA181A8B610051CF8B /* cortado.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		F9D389701818277F009389F8 = {
 			isa = PBXGroup;
 			children = (
@@ -122,11 +134,13 @@
 		F9D389821818277F009389F8 /* TesteGithub */ = {
 			isa = PBXGroup;
 			children = (
+				F98A1AC3181A89110051CF8B /* Images */,
 				F9D3898B1818277F009389F8 /* AppDelegate.h */,
 				F9D3898C1818277F009389F8 /* AppDelegate.m */,
 				F9D3898E1818277F009389F8 /* Main.storyboard */,
 				F9D389911818277F009389F8 /* ViewController.h */,
 				F9D389921818277F009389F8 /* ViewController.m */,
+				F98A1ABF181A87430051CF8B /* Papel pautado.png */,
 				F9D389941818277F009389F8 /* Images.xcassets */,
 				F9D389831818277F009389F8 /* Supporting Files */,
 			);
@@ -238,9 +252,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F98A1AC1181A87430051CF8B /* Papel pautado.png in Resources */,
 				F9D389951818277F009389F8 /* Images.xcassets in Resources */,
 				F9D389871818277F009389F8 /* InfoPlist.strings in Resources */,
 				F9D389901818277F009389F8 /* Main.storyboard in Resources */,
+				F98A1ACB181A8B610051CF8B /* cortado.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

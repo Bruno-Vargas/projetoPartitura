@@ -7,7 +7,7 @@
 //
 
 #import "mixerSound.h"
-
+/*
 @implementation mixerSound
 
 -(id) initArraySound:(int)numElementos{
@@ -17,4 +17,5 @@
     
     return self;
 }
+*/
 @end
