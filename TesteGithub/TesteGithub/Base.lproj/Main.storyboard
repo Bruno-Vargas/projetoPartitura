@@ -59,11 +59,19 @@
                                 <rect key="frame" x="25" y="394" width="271" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFP-hO-LJ8">
+                                <rect key="frame" x="48" y="106" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="antNota" destination="ZpN-AZ-uUT" id="Led-De-IQf"/>
+                        <outlet property="lValorFreq" destination="dFP-hO-LJ8" id="DsU-hK-BXx"/>
                         <outlet property="nota" destination="M1c-2Q-5xA" id="7fd-ZN-gxX"/>
                         <outlet property="proxNota" destination="Pif-Uw-hWA" id="f2x-QN-E7T"/>
                     </connections>
