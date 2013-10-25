@@ -22,6 +22,7 @@
 		F98A1B02181A97E20051CF8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B00181A97E20051CF8B /* InfoPlist.strings */; };
 		F98A1B04181A97E20051CF8B /* MetronomoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A1B03181A97E20051CF8B /* MetronomoTests.m */; };
 		F98A1B0E181A98130051CF8B /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B0D181A98130051CF8B /* Sounds */; };
+		F98A1B10181AA1270051CF8B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A1B0F181AA1270051CF8B /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		F98A1B01181A97E20051CF8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F98A1B03181A97E20051CF8B /* MetronomoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetronomoTests.m; sourceTree = "<group>"; };
 		F98A1B0D181A98130051CF8B /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		F98A1B0F181AA1270051CF8B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F98A1B11181AAA4E0051CF8B /* Tick-DeepFrozenApps-397275646.raw */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tick-DeepFrozenApps-397275646.raw"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F98A1B10181AA1270051CF8B /* AudioToolbox.framework in Frameworks */,
 				F98A1ADB181A97E20051CF8B /* CoreGraphics.framework in Frameworks */,
 				F98A1ADD181A97E20051CF8B /* UIKit.framework in Frameworks */,
 				F98A1AD9181A97E20051CF8B /* Foundation.framework in Frameworks */,
@@ -103,6 +107,7 @@
 		F98A1AD7181A97E20051CF8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F98A1B0F181AA1270051CF8B /* AudioToolbox.framework */,
 				F98A1AD8181A97E20051CF8B /* Foundation.framework */,
 				F98A1ADA181A97E20051CF8B /* CoreGraphics.framework */,
 				F98A1ADC181A97E20051CF8B /* UIKit.framework */,
@@ -118,6 +123,7 @@
 				F98A1AE8181A97E20051CF8B /* AppDelegate.m */,
 				F98A1AEA181A97E20051CF8B /* Main.storyboard */,
 				F98A1AED181A97E20051CF8B /* ViewController.h */,
+				F98A1B11181AAA4E0051CF8B /* Tick-DeepFrozenApps-397275646.raw */,
 				F98A1AEE181A97E20051CF8B /* ViewController.m */,
 				F98A1B0D181A98130051CF8B /* Sounds */,
 				F98A1AF0181A97E20051CF8B /* Images.xcassets */,

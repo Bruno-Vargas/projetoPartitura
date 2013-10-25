@@ -26,4 +26,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)comecar:(id)sender {
+    CFBundleRef mainBundle = CFBundleGetMainBundle();
+    CFURLRef soundFileURLRef;
+    soundFileURLRef = CFBundleCopyResourceURL (mainBundle, (CFStringRef) @"Tick-DeepFrozenApps-397275646", CFSTR ("raw"), NULL);
+    UInt32 soundID;
+    AudioServicesCreateSystemSoundID(soundFileURLRef, &soundID);
+    AudioServicesPlaySystemSound(soundID);
+    
+}
 @end
