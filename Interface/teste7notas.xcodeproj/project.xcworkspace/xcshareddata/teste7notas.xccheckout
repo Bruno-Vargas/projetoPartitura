@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2BC5D37C-B43B-4721-B7F1-E0699F092A20</string>
+	<key>IDESourceControlProjectName</key>
+	<string>teste7notas</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5CD8A85C-78F2-4293-8EE5-95A13CDE113A</key>
+		<string>https://github.com/Bruno-Vargas/projetoPartitura.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Interface/teste7notas.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5CD8A85C-78F2-4293-8EE5-95A13CDE113A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Bruno-Vargas/projetoPartitura.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5CD8A85C-78F2-4293-8EE5-95A13CDE113A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5CD8A85C-78F2-4293-8EE5-95A13CDE113A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>projetoPartitura</string>
+		</dict>
+	</array>
+</dict>
+</plist>
