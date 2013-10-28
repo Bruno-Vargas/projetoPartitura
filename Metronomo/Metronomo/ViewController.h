@@ -6,11 +6,14 @@
 //  Copyright (c) 2013 Bruno Vargas. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-#import <AudioToolBox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    AVAudioPlayer *audioPlayer;
+}
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 @property (weak, nonatomic) IBOutlet UITextField *textoFrequencia;
 
 -(IBAction)comecar:(id)sender;
+-(void)tecFunction;
 @end

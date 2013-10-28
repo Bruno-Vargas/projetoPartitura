@@ -26,13 +26,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) tecFunction{
+    NSURL *url = [NSURL fileURLWithPath: [NSString stringWithFormat: @"%@/tick.mp3", [[NSBundle mainBundle] resourcePath]]];
+    NSError *error;
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: url error:&error];
+    audioPlayer.numberOfLoops = 0;
+    
+    [audioPlayer play];
+
+}
 -(IBAction)comecar:(id)sender {
-    CFBundleRef mainBundle = CFBundleGetMainBundle();
-    CFURLRef soundFileURLRef;
-    soundFileURLRef = CFBundleCopyResourceURL (mainBundle, (CFStringRef) @"Tick-DeepFrozenApps-397275646", CFSTR ("raw"), NULL);
-    UInt32 soundID;
-    AudioServicesCreateSystemSoundID(soundFileURLRef, &soundID);
-    AudioServicesPlaySystemSound(soundID);
+    [self tecFunction];
+    
+    NSTimer
     
 }
 @end
