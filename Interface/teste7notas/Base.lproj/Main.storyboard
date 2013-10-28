@@ -251,8 +251,6 @@
     </scenes>
     <resources>
         <image name="cifra.jpg" width="829" height="973"/>
-        <image name="cifra.jpg" width="829" height="973"/>
-        <image name="cifra.jpg" width="829" height="973"/>
         <image name="gifs-animados-musicas-4.gif" width="450" height="300"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
