@@ -12,6 +12,7 @@
 		0D83134E181AE56F009FCD52 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D83134A181AE56F009FCD52 /* TPCircularBuffer.c */; };
 		0D831350181AE58E009FCD52 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D83134F181AE58E009FCD52 /* Accelerate.framework */; };
 		0D831352181AE59D009FCD52 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D831351181AE59D009FCD52 /* AudioToolbox.framework */; };
+		0D831355181E8026009FCD52 /* Afinador.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D831354181E8026009FCD52 /* Afinador.m */; };
 		F98A1AC1181A87430051CF8B /* Papel pautado.png in Resources */ = {isa = PBXBuildFile; fileRef = F98A1ABF181A87430051CF8B /* Papel pautado.png */; };
 		F98A1ACB181A8B610051CF8B /* cortado.png in Resources */ = {isa = PBXBuildFile; fileRef = F98A1ACA181A8B610051CF8B /* cortado.png */; };
 		F9D3897D1818277F009389F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D3897C1818277F009389F8 /* Foundation.framework */; };
@@ -49,6 +50,8 @@
 		0D83134B181AE56F009FCD52 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPCircularBuffer.h; path = "../../../../Downloads/PitchDetectorExample-master/PitchDetectorExample/TPCircularBuffer.h"; sourceTree = "<group>"; };
 		0D83134F181AE58E009FCD52 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		0D831351181AE59D009FCD52 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0D831353181E8026009FCD52 /* Afinador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Afinador.h; sourceTree = "<group>"; };
+		0D831354181E8026009FCD52 /* Afinador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Afinador.m; sourceTree = "<group>"; };
 		F98A1ABF181A87430051CF8B /* Papel pautado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Papel pautado.png"; sourceTree = "<group>"; };
 		F98A1ACA181A8B610051CF8B /* cortado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cortado.png; sourceTree = "<group>"; };
 		F9D389791818277F009389F8 /* TesteGithub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesteGithub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +112,8 @@
 		F9D389701818277F009389F8 = {
 			isa = PBXGroup;
 			children = (
+				0D831353181E8026009FCD52 /* Afinador.h */,
+				0D831354181E8026009FCD52 /* Afinador.m */,
 				0D831346181AE56F009FCD52 /* AudioController.h */,
 				0D831347181AE56F009FCD52 /* AudioController.m */,
 				0D831348181AE56F009FCD52 /* PitchDetector.h */,
@@ -289,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D83134C181AE56F009FCD52 /* AudioController.m in Sources */,
+				0D831355181E8026009FCD52 /* Afinador.m in Sources */,
 				F9D389931818277F009389F8 /* ViewController.m in Sources */,
 				F9D3898D1818277F009389F8 /* AppDelegate.m in Sources */,
 				0D83134D181AE56F009FCD52 /* PitchDetector.m in Sources */,

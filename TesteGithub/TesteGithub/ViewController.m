@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 
 @end
@@ -24,6 +25,10 @@
     autoCorrelator = [[PitchDetector alloc] initWithSampleRate:audioManager.audioFormat.mSampleRate lowBoundFreq:30 hiBoundFreq:4500 andDelegate:self];
     
     medianPitchFollow = [[NSMutableArray alloc] initWithCapacity:22];
+    self.aux=0;
+    
+    self.objAfinador = [[Afinador alloc]init];
+    
     
     
 }
@@ -88,14 +93,54 @@
         tempSort = nil;
     }
 
-    self.lValorFreq.text = [NSString stringWithFormat:@"%3.1f Hz", value];
+  
 
+    
+    
+    self.lValorFreq.text = [NSString stringWithFormat:@"%4.3f Hz", value];
+
+    
+    
+    [self.objAfinador calculaAfinacao:self.lValorFreq.text];
+    
+    
+    
+    //parar tempo
+    if(self.aux==1){
+        [self stopTimer];
+        
+        //verificar diferenca de tempo
+        self.mili = [self timeElapsedInSeconds] * 1000.0f;
+        printf("tempo %f\n", self.mili);
+        
+        
+        NSLog(@"Nota mais afinada -> %f", [self.objAfinador.notaMaisAfinada doubleValue]);
+        
+        NSLog(@"Nota Atual -> %@ Nota Anterior -> %@ Nota Proxima -> %@", self.objAfinador.notaAtual, self.objAfinador.notaAnterior, self.objAfinador.notaProxima);
+      
+    }
+    
+    //apos a primeria passagem.. starta tempo
+    [self startTimer];
+    self.aux=1;
     
 }
 
 - (void) receivedAudioSamples:(SInt16 *)samples length:(int)len {
     [autoCorrelator addSamples:samples inNumberFrames:len];
 }
+- (double) timeElapsedInSeconds {
+    return [self.end timeIntervalSinceDate:self.start];
+}
+
+- (void) startTimer {
+    self.start = [NSDate date];
+}
+
+- (void) stopTimer {
+    self.end = [NSDate date];
+}
+
 
 - (IBAction)start:(id)sender {
     
