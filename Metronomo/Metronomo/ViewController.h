@@ -7,13 +7,16 @@
 //
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "metronomo.h"
 
 @interface ViewController : UIViewController{
     AVAudioPlayer *audioPlayer;
 }
-@property (weak, nonatomic) IBOutlet UISlider *slider;
-@property (weak, nonatomic) IBOutlet UITextField *textoFrequencia;
+@property (weak, nonatomic) IBOutlet UITextField *numCadencia;
+@property (weak, nonatomic) IBOutlet UITextField *numCompasso;
+@property (nonatomic, strong) metronomo * metronomo;
 
 -(IBAction)comecar:(id)sender;
--(void)tecFunction;
+-(IBAction)parar:(id)sender;
+
 @end

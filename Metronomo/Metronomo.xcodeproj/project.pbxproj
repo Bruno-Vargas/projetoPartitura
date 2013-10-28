@@ -23,10 +23,10 @@
 		F98A1B04181A97E20051CF8B /* MetronomoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A1B03181A97E20051CF8B /* MetronomoTests.m */; };
 		F98A1B0E181A98130051CF8B /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B0D181A98130051CF8B /* Sounds */; };
 		F98A1B10181AA1270051CF8B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A1B0F181AA1270051CF8B /* AudioToolbox.framework */; };
-		F98A1B13181AF4360051CF8B /* grito.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B12181AF4360051CF8B /* grito.mp3 */; };
-		F98A1B15181AF4510051CF8B /*  tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B14181AF4510051CF8B /*  tick.mp3 */; };
-		F98A1B18181AF45F0051CF8B /* tec.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B16181AF45F0051CF8B /* tec.mp3 */; };
+		F98A1B15181AF4510051CF8B /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B14181AF4510051CF8B /* tick.mp3 */; };
 		F98A1B19181AF45F0051CF8B /* toc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B17181AF45F0051CF8B /* toc.mp3 */; };
+		F98A1B1C181EB7610051CF8B /* metronomo.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A1B1B181EB7610051CF8B /* metronomo.m */; };
+		F98A1B1E181EDA5E0051CF8B /* tec.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B1D181EDA5E0051CF8B /* tec.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,11 +61,11 @@
 		F98A1B03181A97E20051CF8B /* MetronomoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetronomoTests.m; sourceTree = "<group>"; };
 		F98A1B0D181A98130051CF8B /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		F98A1B0F181AA1270051CF8B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		F98A1B11181AAA4E0051CF8B /* Tick-DeepFrozenApps-397275646.raw */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tick-DeepFrozenApps-397275646.raw"; sourceTree = "<group>"; };
-		F98A1B12181AF4360051CF8B /* grito.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = grito.mp3; sourceTree = "<group>"; };
-		F98A1B14181AF4510051CF8B /*  tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = " tick.mp3"; path = "Sounds/ tick.mp3"; sourceTree = "<group>"; };
-		F98A1B16181AF45F0051CF8B /* tec.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tec.mp3; path = Sounds/tec.mp3; sourceTree = "<group>"; };
+		F98A1B14181AF4510051CF8B /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tick.mp3; path = Sounds/tick.mp3; sourceTree = "<group>"; };
 		F98A1B17181AF45F0051CF8B /* toc.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = toc.mp3; path = Sounds/toc.mp3; sourceTree = "<group>"; };
+		F98A1B1A181EB7610051CF8B /* metronomo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metronomo.h; path = ../metronomo.h; sourceTree = "<group>"; };
+		F98A1B1B181EB7610051CF8B /* metronomo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = metronomo.m; path = ../metronomo.m; sourceTree = "<group>"; };
+		F98A1B1D181EDA5E0051CF8B /* tec.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tec.mp3; path = Sounds/tec.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,16 +127,16 @@
 		F98A1ADE181A97E20051CF8B /* Metronomo */ = {
 			isa = PBXGroup;
 			children = (
+				F98A1B1A181EB7610051CF8B /* metronomo.h */,
+				F98A1B1B181EB7610051CF8B /* metronomo.m */,
 				F98A1AE7181A97E20051CF8B /* AppDelegate.h */,
 				F98A1AE8181A97E20051CF8B /* AppDelegate.m */,
 				F98A1AEA181A97E20051CF8B /* Main.storyboard */,
 				F98A1AED181A97E20051CF8B /* ViewController.h */,
-				F98A1B11181AAA4E0051CF8B /* Tick-DeepFrozenApps-397275646.raw */,
 				F98A1AEE181A97E20051CF8B /* ViewController.m */,
-				F98A1B14181AF4510051CF8B /*  tick.mp3 */,
-				F98A1B16181AF45F0051CF8B /* tec.mp3 */,
+				F98A1B14181AF4510051CF8B /* tick.mp3 */,
+				F98A1B1D181EDA5E0051CF8B /* tec.mp3 */,
 				F98A1B17181AF45F0051CF8B /* toc.mp3 */,
-				F98A1B12181AF4360051CF8B /* grito.mp3 */,
 				F98A1B0D181A98130051CF8B /* Sounds */,
 				F98A1AF0181A97E20051CF8B /* Images.xcassets */,
 				F98A1ADF181A97E20051CF8B /* Supporting Files */,
@@ -249,11 +249,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F98A1B15181AF4510051CF8B /*  tick.mp3 in Resources */,
-				F98A1B13181AF4360051CF8B /* grito.mp3 in Resources */,
+				F98A1B15181AF4510051CF8B /* tick.mp3 in Resources */,
+				F98A1B1E181EDA5E0051CF8B /* tec.mp3 in Resources */,
 				F98A1AF1181A97E20051CF8B /* Images.xcassets in Resources */,
 				F98A1B19181AF45F0051CF8B /* toc.mp3 in Resources */,
-				F98A1B18181AF45F0051CF8B /* tec.mp3 in Resources */,
 				F98A1AE3181A97E20051CF8B /* InfoPlist.strings in Resources */,
 				F98A1B0E181A98130051CF8B /* Sounds in Resources */,
 				F98A1AEC181A97E20051CF8B /* Main.storyboard in Resources */,
@@ -277,6 +276,7 @@
 			files = (
 				F98A1AEF181A97E20051CF8B /* ViewController.m in Sources */,
 				F98A1AE9181A97E20051CF8B /* AppDelegate.m in Sources */,
+				F98A1B1C181EB7610051CF8B /* metronomo.m in Sources */,
 				F98A1AE5181A97E20051CF8B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
