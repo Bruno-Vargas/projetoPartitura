@@ -12,6 +12,11 @@
 @property (strong, nonatomic) IBOutlet UILabel *lProxNota;
 @property (strong, nonatomic) IBOutlet UILabel *lNota;
 @property (strong, nonatomic) IBOutlet UILabel *lAntNota;
+@property (strong, nonatomic) IBOutlet UILabel *lOitava;
+@property (strong, nonatomic) IBOutlet UILabel *lFrequencia;
+@property (strong, nonatomic) IBOutlet UILabel *lAlto;
+@property (strong, nonatomic) IBOutlet UILabel *lAfinado;
+@property (strong, nonatomic) IBOutlet UILabel *lBaixo;
 
 - (IBAction)bIniciar:(id)sender;
 - (IBAction)bParar:(id)sender;

@@ -26,25 +26,16 @@
 }
 
 - (IBAction)bIniciar:(id)sender {
-    self.teste = 1;
-    switch (_teste) {
-        case 1:
-            break;
-        case 2:
-            break;
-        case 3:
-            break;
-        default:
-            break;
-    }
-
-
+    
 }
 
--(void)colorirComVerde:(float)verde eAzul:(float)azul eVermelho:(float)vermelho {
-    self.lProxNota.backgroundColor = [UIColor colorWithRed: vermelho green: verde blue: azul alpha:0.0];
-    self.lNota.backgroundColor = [UIColor colorWithRed: 231/255 green: 0/255 blue: 141/255 alpha:0.0];
-    self.lAntNota.backgroundColor = [UIColor colorWithRed: 231/255 green: 0/255 blue: 141/255 alpha:0.0];
+
+
+
+-(void)colorirComAlpha:(float)alpha{
+    self.lProxNota.backgroundColor = [UIColor colorWithRed: 255/255 green: 0/255 blue: 0/255 alpha:alpha];
+    self.lNota.backgroundColor = [UIColor colorWithRed: 255/255 green: 0/255 blue: 0/255 alpha:alpha];
+    self.lAntNota.backgroundColor =  [UIColor colorWithRed: 255/255 green: 0/255 blue: 0/255 alpha:alpha];
 }
 
 - (IBAction)bParar:(id)sender {
