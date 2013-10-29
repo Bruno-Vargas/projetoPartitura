@@ -63,8 +63,7 @@
 - (IBAction)parar:(id)sender {
     [self.bIniciar setEnabled: YES];
     [self.metronomo pararCompasso];
-
-
+    self.metronomo = nil;
 }
 
 - (IBAction)iniciar:(id)sender {
