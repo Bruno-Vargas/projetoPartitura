@@ -9,4 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *lProxNota;
+@property (strong, nonatomic) IBOutlet UILabel *lNota;
+@property (strong, nonatomic) IBOutlet UILabel *lAntNota;
+
+- (IBAction)bIniciar:(id)sender;
+
+- (IBAction)bParar:(id)sender;
 @end
+
