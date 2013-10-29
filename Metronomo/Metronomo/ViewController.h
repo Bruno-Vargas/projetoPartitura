@@ -15,8 +15,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *numCadencia;
 @property (weak, nonatomic) IBOutlet UITextField *numCompasso;
 @property (nonatomic, strong) metronomo * metronomo;
+@property (weak, nonatomic) IBOutlet UIImageView *numero;
 
 -(IBAction)comecar:(id)sender;
 -(IBAction)parar:(id)sender;
+
+-(NSString *)numNome;
+-(void) virarNumero;
 
 @end

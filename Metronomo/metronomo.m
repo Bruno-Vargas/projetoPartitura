@@ -7,6 +7,7 @@
 //
 
 #import "metronomo.h"
+#import "ViewController.h"
 
 @implementation metronomo
 -(id)initWithTimer:(int) compasso andCadencia: (int) cadencia{

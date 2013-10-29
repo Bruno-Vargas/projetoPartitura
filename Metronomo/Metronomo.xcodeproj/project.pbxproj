@@ -21,12 +21,21 @@
 		F98A1AFA181A97E20051CF8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A1ADC181A97E20051CF8B /* UIKit.framework */; };
 		F98A1B02181A97E20051CF8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B00181A97E20051CF8B /* InfoPlist.strings */; };
 		F98A1B04181A97E20051CF8B /* MetronomoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A1B03181A97E20051CF8B /* MetronomoTests.m */; };
-		F98A1B0E181A98130051CF8B /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B0D181A98130051CF8B /* Sounds */; };
 		F98A1B10181AA1270051CF8B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A1B0F181AA1270051CF8B /* AudioToolbox.framework */; };
 		F98A1B15181AF4510051CF8B /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B14181AF4510051CF8B /* tick.mp3 */; };
 		F98A1B19181AF45F0051CF8B /* toc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B17181AF45F0051CF8B /* toc.mp3 */; };
 		F98A1B1C181EB7610051CF8B /* metronomo.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A1B1B181EB7610051CF8B /* metronomo.m */; };
 		F98A1B1E181EDA5E0051CF8B /* tec.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B1D181EDA5E0051CF8B /* tec.mp3 */; };
+		F9F7C9B0181FD7570077F9E6 /* cinco.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9A6181FD7570077F9E6 /* cinco.png */; };
+		F9F7C9B1181FD7570077F9E6 /* dois.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9A7181FD7570077F9E6 /* dois.png */; };
+		F9F7C9B2181FD7570077F9E6 /* nove.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9A8181FD7570077F9E6 /* nove.png */; };
+		F9F7C9B3181FD7570077F9E6 /* oito.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9A9181FD7570077F9E6 /* oito.png */; };
+		F9F7C9B4181FD7570077F9E6 /* quatro.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9AA181FD7570077F9E6 /* quatro.png */; };
+		F9F7C9B5181FD7570077F9E6 /* seis.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9AB181FD7570077F9E6 /* seis.png */; };
+		F9F7C9B6181FD7570077F9E6 /* sete.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9AC181FD7570077F9E6 /* sete.png */; };
+		F9F7C9B7181FD7570077F9E6 /* tres.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9AD181FD7570077F9E6 /* tres.png */; };
+		F9F7C9B8181FD7570077F9E6 /* um.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9AE181FD7570077F9E6 /* um.png */; };
+		F9F7C9B9181FD7570077F9E6 /* zero.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9AF181FD7570077F9E6 /* zero.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,13 +68,22 @@
 		F98A1AFF181A97E20051CF8B /* MetronomoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MetronomoTests-Info.plist"; sourceTree = "<group>"; };
 		F98A1B01181A97E20051CF8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F98A1B03181A97E20051CF8B /* MetronomoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetronomoTests.m; sourceTree = "<group>"; };
-		F98A1B0D181A98130051CF8B /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		F98A1B0F181AA1270051CF8B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F98A1B14181AF4510051CF8B /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tick.mp3; path = Sounds/tick.mp3; sourceTree = "<group>"; };
 		F98A1B17181AF45F0051CF8B /* toc.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = toc.mp3; path = Sounds/toc.mp3; sourceTree = "<group>"; };
 		F98A1B1A181EB7610051CF8B /* metronomo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metronomo.h; path = ../metronomo.h; sourceTree = "<group>"; };
 		F98A1B1B181EB7610051CF8B /* metronomo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = metronomo.m; path = ../metronomo.m; sourceTree = "<group>"; };
 		F98A1B1D181EDA5E0051CF8B /* tec.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tec.mp3; path = Sounds/tec.mp3; sourceTree = "<group>"; };
+		F9F7C9A6181FD7570077F9E6 /* cinco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cinco.png; sourceTree = "<group>"; };
+		F9F7C9A7181FD7570077F9E6 /* dois.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dois.png; sourceTree = "<group>"; };
+		F9F7C9A8181FD7570077F9E6 /* nove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nove.png; sourceTree = "<group>"; };
+		F9F7C9A9181FD7570077F9E6 /* oito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oito.png; sourceTree = "<group>"; };
+		F9F7C9AA181FD7570077F9E6 /* quatro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quatro.png; sourceTree = "<group>"; };
+		F9F7C9AB181FD7570077F9E6 /* seis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seis.png; sourceTree = "<group>"; };
+		F9F7C9AC181FD7570077F9E6 /* sete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sete.png; sourceTree = "<group>"; };
+		F9F7C9AD181FD7570077F9E6 /* tres.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tres.png; sourceTree = "<group>"; };
+		F9F7C9AE181FD7570077F9E6 /* um.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = um.png; sourceTree = "<group>"; };
+		F9F7C9AF181FD7570077F9E6 /* zero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zero.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +114,7 @@
 		F98A1ACC181A97E20051CF8B = {
 			isa = PBXGroup;
 			children = (
+				F9F7C9A5181FD7340077F9E6 /* Numeros */,
 				F98A1ADE181A97E20051CF8B /* Metronomo */,
 				F98A1AFD181A97E20051CF8B /* MetronomoTests */,
 				F98A1AD7181A97E20051CF8B /* Frameworks */,
@@ -137,7 +156,6 @@
 				F98A1B14181AF4510051CF8B /* tick.mp3 */,
 				F98A1B1D181EDA5E0051CF8B /* tec.mp3 */,
 				F98A1B17181AF45F0051CF8B /* toc.mp3 */,
-				F98A1B0D181A98130051CF8B /* Sounds */,
 				F98A1AF0181A97E20051CF8B /* Images.xcassets */,
 				F98A1ADF181A97E20051CF8B /* Supporting Files */,
 			);
@@ -171,6 +189,23 @@
 				F98A1B00181A97E20051CF8B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9F7C9A5181FD7340077F9E6 /* Numeros */ = {
+			isa = PBXGroup;
+			children = (
+				F9F7C9A6181FD7570077F9E6 /* cinco.png */,
+				F9F7C9A7181FD7570077F9E6 /* dois.png */,
+				F9F7C9A8181FD7570077F9E6 /* nove.png */,
+				F9F7C9A9181FD7570077F9E6 /* oito.png */,
+				F9F7C9AA181FD7570077F9E6 /* quatro.png */,
+				F9F7C9AB181FD7570077F9E6 /* seis.png */,
+				F9F7C9AC181FD7570077F9E6 /* sete.png */,
+				F9F7C9AD181FD7570077F9E6 /* tres.png */,
+				F9F7C9AE181FD7570077F9E6 /* um.png */,
+				F9F7C9AF181FD7570077F9E6 /* zero.png */,
+			);
+			name = Numeros;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,13 +284,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9F7C9B0181FD7570077F9E6 /* cinco.png in Resources */,
+				F9F7C9B2181FD7570077F9E6 /* nove.png in Resources */,
 				F98A1B15181AF4510051CF8B /* tick.mp3 in Resources */,
+				F9F7C9B9181FD7570077F9E6 /* zero.png in Resources */,
+				F9F7C9B1181FD7570077F9E6 /* dois.png in Resources */,
+				F9F7C9B3181FD7570077F9E6 /* oito.png in Resources */,
 				F98A1B1E181EDA5E0051CF8B /* tec.mp3 in Resources */,
 				F98A1AF1181A97E20051CF8B /* Images.xcassets in Resources */,
 				F98A1B19181AF45F0051CF8B /* toc.mp3 in Resources */,
+				F9F7C9B6181FD7570077F9E6 /* sete.png in Resources */,
 				F98A1AE3181A97E20051CF8B /* InfoPlist.strings in Resources */,
-				F98A1B0E181A98130051CF8B /* Sounds in Resources */,
+				F9F7C9B4181FD7570077F9E6 /* quatro.png in Resources */,
+				F9F7C9B8181FD7570077F9E6 /* um.png in Resources */,
+				F9F7C9B7181FD7570077F9E6 /* tres.png in Resources */,
 				F98A1AEC181A97E20051CF8B /* Main.storyboard in Resources */,
+				F9F7C9B5181FD7570077F9E6 /* seis.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
