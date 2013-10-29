@@ -9,7 +9,7 @@
 #import "metronomo.h"
 
 @implementation metronomo
--(id)initWithTimer:(int) compasso andCadencia: (int) cadencia{
+-(id)initWithTimer:(int) compasso andCadencia: (int) cadencia andTick: (TickBlock) tick{
     NSError *erro;
     self.urlTick = [NSURL fileURLWithPath: [NSString stringWithFormat: @"%@/tick.mp3", [[NSBundle mainBundle] resourcePath]]];
     self.urlTec = [NSURL fileURLWithPath: [NSString stringWithFormat: @"%@/tec.mp3", [[NSBundle mainBundle] resourcePath]]];
@@ -20,22 +20,18 @@
     self.compasso = compasso;
     self.cadencia = cadencia;
     self.contador = 0;
+    self.tick = tick;
     
 
     return self;
 }
 
 -(void)reproduzir{
-    if (self.contador != 0){
-        NSLog(@"tic");
-        [self.reprodutorAudioTick play];
-    }
-    else {
-        NSLog(@"tec");
-        [self.reprodutorAudioTec play];
-    }
+    if (self.contador != 0) [self.reprodutorAudioTick play];
+    else [self.reprodutorAudioTec play];
+    self.tick ();
+    
     self.contador = (self.contador + 1)% self.compasso;
-    NSLog(@"estou na reproduzir");
 }
 -(void)marcarCompasso{
     //inicializa o timer e comeca a funcionar;

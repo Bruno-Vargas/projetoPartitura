@@ -14,7 +14,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *lAntNota;
 
 - (IBAction)bIniciar:(id)sender;
-
 - (IBAction)bParar:(id)sender;
+
+
 @end
 

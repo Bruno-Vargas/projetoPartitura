@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
+typedef void (^TickBlock) ();
 
 @interface metronomo : NSObject
 
@@ -21,8 +22,9 @@
 @property (nonatomic) int contador;
 @property (nonatomic) int compasso;
 @property (nonatomic) int cadencia;
+@property (nonatomic, strong) TickBlock tick;
 
-- (id) initWithTimer: (int)compasso andCadencia: (int) cadencia;
+- (id) initWithTimer: (int)compasso andCadencia: (int) cadencia andTick: (TickBlock) tick;
 - (void) marcarCompasso;
 //inicializa o compasso e chama reproduzir;
 - (void) reproduzir;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Zr7-mD-cqe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Zr7-mD-cqe">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -197,8 +197,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="bIniciar" destination="tzq-rY-eYD" id="v9c-5e-TUt"/>
                         <outlet property="lBatimento" destination="ax9-0P-JSe" id="mwm-4i-mBT"/>
                         <outlet property="lCompasso" destination="zUP-yR-su5" id="NQ8-6Z-Zre"/>
+                        <outlet property="numero" destination="1O6-F2-tHW" id="DRd-a4-puT"/>
                         <outlet property="stepper" destination="mCc-0v-LtP" id="5Tl-P6-8UE"/>
                     </connections>
                 </viewController>
