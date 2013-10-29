@@ -35,12 +35,14 @@
     self.cad = [self.numCadencia.text integerValue];
     self.com = [self.numCompasso.text integerValue];
     self.rodando = TRUE;
-    self.metronomo =[[metronomo alloc] initWithTimer: self.com andCadencia: self.cad];
+    self.metronomo =[[metronomo alloc] initWithTimer: self.com andCadencia: self.cad andTick:^{
+        [self virarNumero];
+    }];
     
     [self.metronomo marcarCompasso];
-    [self virarNumero];
     
 }
+
 -(IBAction)parar:(id)parar;{
     [self.metronomo pararCompasso];
     NSLog(@"estou na parar");

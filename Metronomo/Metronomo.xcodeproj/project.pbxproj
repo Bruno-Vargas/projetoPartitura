@@ -36,6 +36,9 @@
 		F9F7C9B7181FD7570077F9E6 /* tres.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9AD181FD7570077F9E6 /* tres.png */; };
 		F9F7C9B8181FD7570077F9E6 /* um.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9AE181FD7570077F9E6 /* um.png */; };
 		F9F7C9B9181FD7570077F9E6 /* zero.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9AF181FD7570077F9E6 /* zero.png */; };
+		F9F7C9BD181FF17F0077F9E6 /* dez.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9BA181FF17F0077F9E6 /* dez.png */; };
+		F9F7C9BE181FF17F0077F9E6 /* doze.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9BB181FF17F0077F9E6 /* doze.png */; };
+		F9F7C9BF181FF17F0077F9E6 /* onze.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9BC181FF17F0077F9E6 /* onze.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		F9F7C9AD181FD7570077F9E6 /* tres.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tres.png; sourceTree = "<group>"; };
 		F9F7C9AE181FD7570077F9E6 /* um.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = um.png; sourceTree = "<group>"; };
 		F9F7C9AF181FD7570077F9E6 /* zero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zero.png; sourceTree = "<group>"; };
+		F9F7C9BA181FF17F0077F9E6 /* dez.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dez.png; sourceTree = "<group>"; };
+		F9F7C9BB181FF17F0077F9E6 /* doze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doze.png; sourceTree = "<group>"; };
+		F9F7C9BC181FF17F0077F9E6 /* onze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onze.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +200,9 @@
 		F9F7C9A5181FD7340077F9E6 /* Numeros */ = {
 			isa = PBXGroup;
 			children = (
+				F9F7C9BA181FF17F0077F9E6 /* dez.png */,
+				F9F7C9BB181FF17F0077F9E6 /* doze.png */,
+				F9F7C9BC181FF17F0077F9E6 /* onze.png */,
 				F9F7C9A6181FD7570077F9E6 /* cinco.png */,
 				F9F7C9A7181FD7570077F9E6 /* dois.png */,
 				F9F7C9A8181FD7570077F9E6 /* nove.png */,
@@ -288,12 +297,15 @@
 				F9F7C9B2181FD7570077F9E6 /* nove.png in Resources */,
 				F98A1B15181AF4510051CF8B /* tick.mp3 in Resources */,
 				F9F7C9B9181FD7570077F9E6 /* zero.png in Resources */,
+				F9F7C9BD181FF17F0077F9E6 /* dez.png in Resources */,
 				F9F7C9B1181FD7570077F9E6 /* dois.png in Resources */,
 				F9F7C9B3181FD7570077F9E6 /* oito.png in Resources */,
 				F98A1B1E181EDA5E0051CF8B /* tec.mp3 in Resources */,
 				F98A1AF1181A97E20051CF8B /* Images.xcassets in Resources */,
 				F98A1B19181AF45F0051CF8B /* toc.mp3 in Resources */,
 				F9F7C9B6181FD7570077F9E6 /* sete.png in Resources */,
+				F9F7C9BE181FF17F0077F9E6 /* doze.png in Resources */,
+				F9F7C9BF181FF17F0077F9E6 /* onze.png in Resources */,
 				F98A1AE3181A97E20051CF8B /* InfoPlist.strings in Resources */,
 				F9F7C9B4181FD7570077F9E6 /* quatro.png in Resources */,
 				F9F7C9B8181FD7570077F9E6 /* um.png in Resources */,
