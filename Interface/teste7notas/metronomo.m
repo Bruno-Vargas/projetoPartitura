@@ -26,11 +26,16 @@
 }
 
 -(void)reproduzir{
-    if (self.contador != 0)[self.reprodutorAudioTick play];
-    else [self.reprodutorAudioTec play];
-    
+    if (self.contador != 0){
+        NSLog(@"tic");
+        [self.reprodutorAudioTick play];
+    }
+    else {
+        NSLog(@"tec");
+        [self.reprodutorAudioTec play];
+    }
     self.contador = (self.contador + 1)% self.compasso;
-    
+    NSLog(@"estou na reproduzir");
 }
 -(void)marcarCompasso{
     //inicializa o timer e comeca a funcionar;
