@@ -40,6 +40,7 @@
     //inserir notas musicais no indice 0(zero) da matriz
     [self.notasMusicais addObject:[NSMutableArray arrayWithObjects:@"DO", @"DO#", @"RE", @"RE#", @"MI", @"FA", @"FA#", @"SOL", @"SOL#", @"LA", @"LA#", @"SI", nil]];
 
+    
     //inserir frequencias no indice 1 da matriz
     [self.notasMusicais addObject:[NSMutableArray arrayWithObjects:
                                    [NSString stringWithFormat: @"%f",[@"132.000" doubleValue ]],

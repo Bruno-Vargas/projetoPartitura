@@ -118,6 +118,7 @@
         
         NSLog(@"Nota Atual -> %@ Nota Anterior -> %@ Nota Proxima -> %@", self.objAfinador.notaAtual, self.objAfinador.notaAnterior, self.objAfinador.notaProxima);
       
+        
     }
     
     //apos a primeria passagem.. starta tempo

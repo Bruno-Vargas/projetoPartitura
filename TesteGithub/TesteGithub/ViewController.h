@@ -17,6 +17,7 @@
     AudioController *audioManager;
     PitchDetector *autoCorrelator;
     
+    
     NSMutableArray *medianPitchFollow;
 }
 - (void) startTimer;

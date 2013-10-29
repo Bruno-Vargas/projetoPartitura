@@ -12,6 +12,7 @@
 
 
 
+
 //criar matriz com nome da nota e valor da frequencia
 @property (nonatomic, strong) NSMutableArray *notasMusicais;
 
