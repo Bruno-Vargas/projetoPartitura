@@ -43,25 +43,25 @@
     
     //inserir frequencias no indice 1 da matriz
     [self.notasMusicais addObject:[NSMutableArray arrayWithObjects:
-                                   [NSString stringWithFormat: @"%f",[@"132.000" doubleValue ]],
-                                   [NSString stringWithFormat: @"%f",[@"139.780" doubleValue ]],
+                                   [NSString stringWithFormat: @"%f",[@"32.700" doubleValue ]],
+                                   [NSString stringWithFormat: @"%f",[@"34.625" doubleValue ]],
                                    
-                                   [NSString stringWithFormat: @"%f",[@"148.104" doubleValue ]],
-                                   [NSString stringWithFormat: @"%f",[@"156.948" doubleValue ]],
+                                   [NSString stringWithFormat: @"%f",[@"36.6875" doubleValue ]],
+                                   [NSString stringWithFormat: @"%f",[@"38.875" doubleValue ]],
                                    
-                                   [NSString stringWithFormat: @"%f",[@"166.320" doubleValue ]],
+                                   [NSString stringWithFormat: @"%f",[@"41.200" doubleValue ]],
 
                                    
-                                   [NSString stringWithFormat: @"%f",[@"176.220" doubleValue ]],
-                                   [NSString stringWithFormat: @"%f",[@"186.648" doubleValue ]],
+                                   [NSString stringWithFormat: @"%f",[@"43.65" doubleValue ]],
+                                   [NSString stringWithFormat: @"%f",[@"46.25" doubleValue ]],
                                    
-                                   [NSString stringWithFormat: @"%f",[@"197.736" doubleValue ]],
-                                   [NSString stringWithFormat: @"%f",[@"209.484" doubleValue ]],
+                                   [NSString stringWithFormat: @"%f",[@"49.00" doubleValue ]],
+                                   [NSString stringWithFormat: @"%f",[@"51.8875" doubleValue ]],
                                    
-                                   [NSString stringWithFormat: @"%f",[@"222.024" doubleValue ]],
-                                   [NSString stringWithFormat: @"%f",[@"235.224" doubleValue ]],
+                                   [NSString stringWithFormat: @"%f",[@"55.000" doubleValue ]],
+                                   [NSString stringWithFormat: @"%f",[@"58.275" doubleValue ]],
                                    
-                                   [NSString stringWithFormat: @"%f",[@"249.216" doubleValue ]],
+                                   [NSString stringWithFormat: @"%f",[@"61.725" doubleValue ]],
                                    
                                     nil]];
 
@@ -79,10 +79,16 @@
 
 
 -(void) calculaNumOitava:(double)freqAtual{
+    self.numOitava = 1;
+    while(freqAtual > self.maiorFrequencia){
+        freqAtual /= 2;
+        self.numOitava++;
+        self.freqReduzida = freqAtual;
+    }
     
-    self.numOitava =  (int) (freqAtual / self.maiorFrequencia) + 1;
     
 }
+ int aux_indice = 0;
 
 //metodo resposavel por receber a freq atual.. e verificar se a nota esta afinada ou nao
 -(double) calculaAfinacao: (NSString *) freqAtual{
@@ -91,23 +97,16 @@
     //buscar numero de oitavas que esta
     [self calculaNumOitava:[freqAtual doubleValue]];
     
-    
-    //sabendo a qtde de oitavas que possuo.. pego minha frequencia atual.. e divivo pela qtde de oitavas.. e volto a trabalhar com as frequencias base
-    double auxFreqAtual;
-    
-    
-    auxFreqAtual = [freqAtual doubleValue] / self.numOitava;
 
-
-    //percorrer matriz -> notasMusicais e efetuar uma subtracao com a auxFreqAtual.. o modulo do menor resultado é a nota a ser tocada
+    //percorrer matriz -> notasMusicais e efetuar uma subtracao com a frequenciaReduzida.. o modulo do menor resultado é a nota a ser tocada
     
-      int aux_indice = 0;
+    
     
     //realoca matriz para efetuar calculos de frequencias mais proximas das notas
     self.matrizAfinada = [[NSMutableArray alloc]init];
     self.moduloMatrizAfinada = [[NSMutableArray alloc]init];
     for(int i=0; i< [self.notasMusicais[0] count];i++){
-        self.matrizAfinada[i] = [NSString stringWithFormat:@"%f", [self.notasMusicais[1][i] doubleValue]- auxFreqAtual];
+        self.matrizAfinada[i] = [NSString stringWithFormat:@"%f", [self.notasMusicais[1][i] doubleValue]- self.freqReduzida];
         
         
         //realiza o modulo da matriz afinada.. trazendo apenas valores positivos

@@ -18,6 +18,8 @@
 
 @property (nonatomic) double rangeToleranciaAfinacao;
 
+@property (nonatomic) double freqReduzida;
+
 @property (nonatomic) double menorFrequencia;
 @property (nonatomic) double maiorFrequencia;
 
