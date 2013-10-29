@@ -10,6 +10,8 @@
 
 @interface MetronomoViewController ()
 @property(strong,nonatomic) IBOutlet UIStepper * stepper;
+@property(nonatomic) int cad;
+@property(nonatomic) int com;
 @end
 
 @implementation MetronomoViewController
@@ -48,6 +50,24 @@
 - (IBAction)slBatimento:(id)sender {
     double value = [(UISlider*)sender value];
     [self.lBatimento setText:[NSString stringWithFormat:@"%d", (int)value]];
+    
+}
+- (IBAction)parar:(id)sender {
+    
+    [self.metronomo pararCompasso];
+    NSLog(@"estou na parar");
+
+
+}
+
+- (IBAction)iniciar:(id)sender {
+    NSLog(@"estou em comecar");
+    
+    self.cad = [self.lBatimento.text integerValue];
+    self.com = [self.lCompasso.text integerValue];
+    self.metronomo =[[metronomo alloc] initWithTimer: self.com andCadencia: self.cad];
+    
+    [self.metronomo marcarCompasso];
     
 }
 @end

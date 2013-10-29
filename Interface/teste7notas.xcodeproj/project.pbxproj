@@ -21,9 +21,11 @@
 		DFB930DE1819803E00401180 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB930C01819803E00401180 /* UIKit.framework */; };
 		DFB930E61819803E00401180 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFB930E41819803E00401180 /* InfoPlist.strings */; };
 		DFB930E81819803E00401180 /* teste7notasTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB930E71819803E00401180 /* teste7notasTests.m */; };
-		DFB930F21819804F00401180 /* cifra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DFB930F11819804F00401180 /* cifra.jpg */; };
-		DFB930F5181987B700401180 /* gifs-animados-musicas-4.gif in Resources */ = {isa = PBXBuildFile; fileRef = DFB930F4181987B700401180 /* gifs-animados-musicas-4.gif */; };
 		DFCE058B181EC6CB0085B616 /* MetronomoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCE058A181EC6CB0085B616 /* MetronomoViewController.m */; };
+		F98A1B20181EE3580051CF8B /* cifra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B1F181EE3580051CF8B /* cifra.jpg */; };
+		F98A1B22181EE3600051CF8B /* gifs-animados-musicas-4.gif in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B21181EE3600051CF8B /* gifs-animados-musicas-4.gif */; };
+		F98A1B25181EE7180051CF8B /* metronomo.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A1B24181EE7180051CF8B /* metronomo.m */; };
+		F98A1B27181EE77E0051CF8B /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B26181EE77E0051CF8B /* Sounds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +58,13 @@
 		DFB930E31819803E00401180 /* teste7notasTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "teste7notasTests-Info.plist"; sourceTree = "<group>"; };
 		DFB930E51819803E00401180 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DFB930E71819803E00401180 /* teste7notasTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = teste7notasTests.m; sourceTree = "<group>"; };
-		DFB930F11819804F00401180 /* cifra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cifra.jpg; path = ../../../../Downloads/cifra.jpg; sourceTree = "<group>"; };
-		DFB930F4181987B700401180 /* gifs-animados-musicas-4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "gifs-animados-musicas-4.gif"; path = "../../../../Downloads/gifs-animados-musicas-4.gif"; sourceTree = "<group>"; };
 		DFCE0589181EC6CB0085B616 /* MetronomoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MetronomoViewController.h; path = ../MetronomoViewController.h; sourceTree = "<group>"; };
 		DFCE058A181EC6CB0085B616 /* MetronomoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MetronomoViewController.m; path = ../MetronomoViewController.m; sourceTree = "<group>"; };
+		F98A1B1F181EE3580051CF8B /* cifra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cifra.jpg; sourceTree = "<group>"; };
+		F98A1B21181EE3600051CF8B /* gifs-animados-musicas-4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "gifs-animados-musicas-4.gif"; sourceTree = "<group>"; };
+		F98A1B23181EE7180051CF8B /* metronomo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metronomo.h; sourceTree = "<group>"; };
+		F98A1B24181EE7180051CF8B /* metronomo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = metronomo.m; sourceTree = "<group>"; };
+		F98A1B26181EE77E0051CF8B /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +124,14 @@
 		DFB930C21819803E00401180 /* teste7notas */ = {
 			isa = PBXGroup;
 			children = (
+				F98A1B26181EE77E0051CF8B /* Sounds */,
 				DFB930F31819805700401180 /* view */,
 				DFB930CB1819803E00401180 /* AppDelegate.h */,
 				DFB930CC1819803E00401180 /* AppDelegate.m */,
 				DFB930D11819803E00401180 /* ViewController.h */,
 				DFB930D21819803E00401180 /* ViewController.m */,
+				F98A1B23181EE7180051CF8B /* metronomo.h */,
+				F98A1B24181EE7180051CF8B /* metronomo.m */,
 				DFB930D41819803E00401180 /* Images.xcassets */,
 				DFB930C31819803E00401180 /* Supporting Files */,
 			);
@@ -164,9 +172,9 @@
 			children = (
 				DFCE0589181EC6CB0085B616 /* MetronomoViewController.h */,
 				DFCE058A181EC6CB0085B616 /* MetronomoViewController.m */,
-				DFB930F11819804F00401180 /* cifra.jpg */,
-				DFB930F4181987B700401180 /* gifs-animados-musicas-4.gif */,
 				DFB930CE1819803E00401180 /* Main.storyboard */,
+				F98A1B1F181EE3580051CF8B /* cifra.jpg */,
+				F98A1B21181EE3600051CF8B /* gifs-animados-musicas-4.gif */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -247,9 +255,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F98A1B27181EE77E0051CF8B /* Sounds in Resources */,
 				DFB930D51819803E00401180 /* Images.xcassets in Resources */,
-				DFB930F21819804F00401180 /* cifra.jpg in Resources */,
-				DFB930F5181987B700401180 /* gifs-animados-musicas-4.gif in Resources */,
+				F98A1B20181EE3580051CF8B /* cifra.jpg in Resources */,
+				F98A1B22181EE3600051CF8B /* gifs-animados-musicas-4.gif in Resources */,
 				DFB930C71819803E00401180 /* InfoPlist.strings in Resources */,
 				DFB930D01819803E00401180 /* Main.storyboard in Resources */,
 			);
@@ -273,6 +282,7 @@
 				DFB930D31819803E00401180 /* ViewController.m in Sources */,
 				DFB930CD1819803E00401180 /* AppDelegate.m in Sources */,
 				DFB930C91819803E00401180 /* main.m in Sources */,
+				F98A1B25181EE7180051CF8B /* metronomo.m in Sources */,
 				DFCE058B181EC6CB0085B616 /* MetronomoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
