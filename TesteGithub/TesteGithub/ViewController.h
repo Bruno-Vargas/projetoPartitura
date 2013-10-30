@@ -27,7 +27,7 @@
 
 @property (nonatomic, strong) Afinador *objAfinador;
 
-@property (nonatomic) int aux;
+@property (nonatomic) int auxContTempo;
 - (double) timeElapsedInSeconds;
 @property (nonatomic) double mili;
 @property (strong, nonatomic) IBOutlet UIImageView *proxNota;

@@ -25,7 +25,7 @@
     autoCorrelator = [[PitchDetector alloc] initWithSampleRate:audioManager.audioFormat.mSampleRate lowBoundFreq:30 hiBoundFreq:4500 andDelegate:self];
     
     medianPitchFollow = [[NSMutableArray alloc] initWithCapacity:22];
-    self.aux=0;
+    self.auxContTempo=0;
     
     self.objAfinador = [[Afinador alloc]init];
     
@@ -38,10 +38,10 @@
     [super viewDidUnload];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+//{
+//    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+//}
 
 - (void)didReceiveMemoryWarning
 {
@@ -106,7 +106,7 @@
     
     
     //parar tempo
-    if(self.aux==1){
+    if(self.auxContTempo==1){
         [self stopTimer];
         
         //verificar diferenca de tempo
@@ -123,7 +123,7 @@
     
     //apos a primeria passagem.. starta tempo
     [self startTimer];
-    self.aux=1;
+    self.auxContTempo=1;
     
 }
 

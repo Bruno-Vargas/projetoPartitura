@@ -25,20 +25,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)bIniciar:(id)sender {
-    
-}
+//- (IBAction)bIniciar:(id)sender {
+//    
+//}
 
 
 
-
--(void)colorirComAlpha:(float)alpha{
-    self.lProxNota.backgroundColor = [UIColor colorWithRed: 255/255 green: 0/255 blue: 0/255 alpha:alpha];
-    self.lNota.backgroundColor = [UIColor colorWithRed: 255/255 green: 0/255 blue: 0/255 alpha:alpha];
-    self.lAntNota.backgroundColor =  [UIColor colorWithRed: 255/255 green: 0/255 blue: 0/255 alpha:alpha];
-}
-
-- (IBAction)bParar:(id)sender {
-    
-}
+//
+//-(void)colorirComAlpha:(float)alpha{
+//    self.lProxNota.backgroundColor = [UIColor colorWithRed: 255/255 green: 0/255 blue: 0/255 alpha:alpha];
+//    self.lNota.backgroundColor = [UIColor colorWithRed: 255/255 green: 0/255 blue: 0/255 alpha:alpha];
+//    self.lAntNota.backgroundColor =  [UIColor colorWithRed: 255/255 green: 0/255 blue: 0/255 alpha:alpha];
+//}
+//
+//- (IBAction)bParar:(id)sender {
+//    
+//}
 @end

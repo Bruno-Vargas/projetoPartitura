@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D831357182116F7009FCD52 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D831356182116F7009FCD52 /* Accelerate.framework */; };
+		0D83135C18211C50009FCD52 /* Afinador.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D83135B18211C50009FCD52 /* Afinador.m */; };
+		0D83135F18211C88009FCD52 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D83135E18211C88009FCD52 /* AudioController.m */; };
+		0D83136218211CCF009FCD52 /* PitchDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D83136118211CCF009FCD52 /* PitchDetector.m */; };
+		0D83136518211EBF009FCD52 /* AfinadorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D83136418211EBF009FCD52 /* AfinadorViewController.m */; };
 		DFB930BD1819803E00401180 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB930BC1819803E00401180 /* Foundation.framework */; };
 		DFB930BF1819803E00401180 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB930BE1819803E00401180 /* CoreGraphics.framework */; };
 		DFB930C11819803E00401180 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB930C01819803E00401180 /* UIKit.framework */; };
@@ -14,7 +19,6 @@
 		DFB930C91819803E00401180 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB930C81819803E00401180 /* main.m */; };
 		DFB930CD1819803E00401180 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB930CC1819803E00401180 /* AppDelegate.m */; };
 		DFB930D01819803E00401180 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFB930CE1819803E00401180 /* Main.storyboard */; };
-		DFB930D31819803E00401180 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB930D21819803E00401180 /* ViewController.m */; };
 		DFB930D51819803E00401180 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFB930D41819803E00401180 /* Images.xcassets */; };
 		DFB930DC1819803E00401180 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB930DB1819803E00401180 /* XCTest.framework */; };
 		DFB930DD1819803E00401180 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB930BC1819803E00401180 /* Foundation.framework */; };
@@ -55,6 +59,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D831356182116F7009FCD52 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		0D83135A18211C50009FCD52 /* Afinador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Afinador.h; sourceTree = "<group>"; };
+		0D83135B18211C50009FCD52 /* Afinador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Afinador.m; sourceTree = "<group>"; };
+		0D83135D18211C88009FCD52 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		0D83135E18211C88009FCD52 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		0D83136018211CCF009FCD52 /* PitchDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PitchDetector.h; sourceTree = "<group>"; };
+		0D83136118211CCF009FCD52 /* PitchDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PitchDetector.m; sourceTree = "<group>"; };
+		0D83136318211EBF009FCD52 /* AfinadorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfinadorViewController.h; sourceTree = "<group>"; };
+		0D83136418211EBF009FCD52 /* AfinadorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfinadorViewController.m; sourceTree = "<group>"; };
 		DFB930B91819803E00401180 /* teste7notas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teste7notas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB930BC1819803E00401180 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DFB930BE1819803E00401180 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,8 +79,6 @@
 		DFB930CB1819803E00401180 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DFB930CC1819803E00401180 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DFB930CF1819803E00401180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DFB930D11819803E00401180 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DFB930D21819803E00401180 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DFB930D41819803E00401180 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DFB930DA1819803E00401180 /* teste7notasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teste7notasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB930DB1819803E00401180 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -104,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D831357182116F7009FCD52 /* Accelerate.framework in Frameworks */,
 				F96782AD181FC8AD00D35CB4 /* AudioToolbox.framework in Frameworks */,
 				DFB930BF1819803E00401180 /* CoreGraphics.framework in Frameworks */,
 				DFB930C11819803E00401180 /* UIKit.framework in Frameworks */,
@@ -124,6 +136,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D83135818211763009FCD52 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0D83135A18211C50009FCD52 /* Afinador.h */,
+				0D83135B18211C50009FCD52 /* Afinador.m */,
+				0D83135D18211C88009FCD52 /* AudioController.h */,
+				0D83135E18211C88009FCD52 /* AudioController.m */,
+				0D83136018211CCF009FCD52 /* PitchDetector.h */,
+				0D83136118211CCF009FCD52 /* PitchDetector.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		0D83135918211771009FCD52 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
 		DFB930B01819803E00401180 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +178,7 @@
 		DFB930BB1819803E00401180 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D831356182116F7009FCD52 /* Accelerate.framework */,
 				F96782AC181FC8AD00D35CB4 /* AudioToolbox.framework */,
 				DFB930BC1819803E00401180 /* Foundation.framework */,
 				DFB930BE1819803E00401180 /* CoreGraphics.framework */,
@@ -158,13 +191,13 @@
 		DFB930C21819803E00401180 /* teste7notas */ = {
 			isa = PBXGroup;
 			children = (
+				0D83135918211771009FCD52 /* controller */,
+				0D83135818211763009FCD52 /* model */,
 				F9F7C9C018200D690077F9E6 /* numeros */,
 				F96782AE181FCCBB00D35CB4 /* Sounds */,
 				DFB930F31819805700401180 /* view */,
 				DFB930CB1819803E00401180 /* AppDelegate.h */,
 				DFB930CC1819803E00401180 /* AppDelegate.m */,
-				DFB930D11819803E00401180 /* ViewController.h */,
-				DFB930D21819803E00401180 /* ViewController.m */,
 				F98A1B23181EE7180051CF8B /* metronomo.h */,
 				F98A1B24181EE7180051CF8B /* metronomo.m */,
 				DFB930D41819803E00401180 /* Images.xcassets */,
@@ -210,6 +243,8 @@
 				DFB930CE1819803E00401180 /* Main.storyboard */,
 				F98A1B1F181EE3580051CF8B /* cifra.jpg */,
 				F98A1B21181EE3600051CF8B /* gifs-animados-musicas-4.gif */,
+				0D83136318211EBF009FCD52 /* AfinadorViewController.h */,
+				0D83136418211EBF009FCD52 /* AfinadorViewController.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -359,11 +394,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFB930D31819803E00401180 /* ViewController.m in Sources */,
+				0D83136518211EBF009FCD52 /* AfinadorViewController.m in Sources */,
 				DFB930CD1819803E00401180 /* AppDelegate.m in Sources */,
 				DFB930C91819803E00401180 /* main.m in Sources */,
 				F98A1B25181EE7180051CF8B /* metronomo.m in Sources */,
+				0D83136218211CCF009FCD52 /* PitchDetector.m in Sources */,
+				0D83135F18211C88009FCD52 /* AudioController.m in Sources */,
 				DFCE058B181EC6CB0085B616 /* MetronomoViewController.m in Sources */,
+				0D83135C18211C50009FCD52 /* Afinador.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
