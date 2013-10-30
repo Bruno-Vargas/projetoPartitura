@@ -79,6 +79,12 @@
     
 }
 
+- (IBAction)bVoltar:(id)sender {
+    [self.bIniciar setEnabled: YES];
+    [self.metronomo pararCompasso];
+    self.metronomo = nil;
+}
+
 -(NSString*) numNome{
     switch (self.metronomo.contador){
             

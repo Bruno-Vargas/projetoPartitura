@@ -22,6 +22,7 @@
 - (IBAction)slBatimento:(id)sender;
 - (IBAction)parar:(id)sender;
 - (IBAction)iniciar:(id)sender;
+- (IBAction)bVoltar:(id)sender;
 
 -(NSString *) numNome;
 -(void) virarNumero;

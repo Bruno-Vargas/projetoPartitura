@@ -109,6 +109,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="bVoltar:" destination="SzH-bg-TQo" eventType="touchUpInside" id="cbT-KA-jJh"/>
                                     <segue destination="Zr7-mD-cqe" kind="modal" modalTransitionStyle="flipHorizontal" id="FR2-w4-cFD"/>
                                 </connections>
                             </button>
@@ -425,8 +426,6 @@
     </scenes>
     <resources>
         <image name="cifra.jpg" width="829" height="973"/>
-        <image name="cifra.jpg" width="829" height="973"/>
-        <image name="cifra.jpg" width="829" height="973"/>
         <image name="gifs-animados-musicas-4.gif" width="450" height="300"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -435,6 +434,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oax-5I-ika"/>
+        <segue reference="FR2-w4-cFD"/>
     </inferredMetricsTieBreakers>
 </document>
