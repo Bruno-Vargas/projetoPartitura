@@ -20,7 +20,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
     }
 
 - (void)didReceiveMemoryWarning
@@ -28,6 +27,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 -(IBAction)comecar:(id)sender {
     NSLog(@"estou em comecar");
@@ -37,6 +37,7 @@
     self.rodando = TRUE;
     self.metronomo =[[metronomo alloc] initWithTimer: self.com andCadencia: self.cad andTick:^{
         [self virarNumero];
+        [self myAnimate];
     }];
     
     [self.metronomo marcarCompasso];
@@ -49,6 +50,21 @@
     
 }
 
+-(void) myAnimate{
+    NSLog(@"estou na animate");
+    CABasicAnimation *apontar = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    [apontar setDelegate:self];
+    [apontar setToValue: [NSNumber numberWithFloat:3*M_PI/2]]; // o quanto ele vai rodar (fazer funcao para calcular)
+    [apontar setDuration: 1.0];
+    
+    
+    CAMediaTimingFunction *tf = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]; //muda o tempo de rotacao
+    
+    [apontar setTimingFunction: tf];
+    
+    //aqui devo ligar para a view que vou animar
+    [[self.lanca layer] addAnimation:apontar forKey: @"apontarPara"];
+}
 -(NSString*) numNome{
     switch (self.metronomo.contador){
         

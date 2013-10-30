@@ -26,6 +26,8 @@
 		F98A1B19181AF45F0051CF8B /* toc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B17181AF45F0051CF8B /* toc.mp3 */; };
 		F98A1B1C181EB7610051CF8B /* metronomo.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A1B1B181EB7610051CF8B /* metronomo.m */; };
 		F98A1B1E181EDA5E0051CF8B /* tec.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B1D181EDA5E0051CF8B /* tec.mp3 */; };
+		F9E80CE818215E85009BCEC8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E80CE718215E85009BCEC8 /* QuartzCore.framework */; };
+		F9E80CEA182165EA009BCEC8 /* Lan_a.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E80CE9182165EA009BCEC8 /* Lan_a.png */; };
 		F9F7C9B0181FD7570077F9E6 /* cinco.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9A6181FD7570077F9E6 /* cinco.png */; };
 		F9F7C9B1181FD7570077F9E6 /* dois.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9A7181FD7570077F9E6 /* dois.png */; };
 		F9F7C9B2181FD7570077F9E6 /* nove.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9A8181FD7570077F9E6 /* nove.png */; };
@@ -77,6 +79,8 @@
 		F98A1B1A181EB7610051CF8B /* metronomo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metronomo.h; path = ../metronomo.h; sourceTree = "<group>"; };
 		F98A1B1B181EB7610051CF8B /* metronomo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = metronomo.m; path = ../metronomo.m; sourceTree = "<group>"; };
 		F98A1B1D181EDA5E0051CF8B /* tec.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tec.mp3; path = Sounds/tec.mp3; sourceTree = "<group>"; };
+		F9E80CE718215E85009BCEC8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F9E80CE9182165EA009BCEC8 /* Lan_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lan_a.png; sourceTree = "<group>"; };
 		F9F7C9A6181FD7570077F9E6 /* cinco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cinco.png; sourceTree = "<group>"; };
 		F9F7C9A7181FD7570077F9E6 /* dois.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dois.png; sourceTree = "<group>"; };
 		F9F7C9A8181FD7570077F9E6 /* nove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nove.png; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E80CE818215E85009BCEC8 /* QuartzCore.framework in Frameworks */,
 				F98A1B10181AA1270051CF8B /* AudioToolbox.framework in Frameworks */,
 				F98A1ADB181A97E20051CF8B /* CoreGraphics.framework in Frameworks */,
 				F98A1ADD181A97E20051CF8B /* UIKit.framework in Frameworks */,
@@ -140,6 +145,7 @@
 		F98A1AD7181A97E20051CF8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9E80CE718215E85009BCEC8 /* QuartzCore.framework */,
 				F98A1B0F181AA1270051CF8B /* AudioToolbox.framework */,
 				F98A1AD8181A97E20051CF8B /* Foundation.framework */,
 				F98A1ADA181A97E20051CF8B /* CoreGraphics.framework */,
@@ -162,6 +168,7 @@
 				F98A1B14181AF4510051CF8B /* tick.mp3 */,
 				F98A1B1D181EDA5E0051CF8B /* tec.mp3 */,
 				F98A1B17181AF45F0051CF8B /* toc.mp3 */,
+				F9E80CE9182165EA009BCEC8 /* Lan_a.png */,
 				F98A1AF0181A97E20051CF8B /* Images.xcassets */,
 				F98A1ADF181A97E20051CF8B /* Supporting Files */,
 			);
@@ -308,6 +315,7 @@
 				F9F7C9BF181FF17F0077F9E6 /* onze.png in Resources */,
 				F98A1AE3181A97E20051CF8B /* InfoPlist.strings in Resources */,
 				F9F7C9B4181FD7570077F9E6 /* quatro.png in Resources */,
+				F9E80CEA182165EA009BCEC8 /* Lan_a.png in Resources */,
 				F9F7C9B8181FD7570077F9E6 /* um.png in Resources */,
 				F9F7C9B7181FD7570077F9E6 /* tres.png in Resources */,
 				F98A1AEC181A97E20051CF8B /* Main.storyboard in Resources */,
