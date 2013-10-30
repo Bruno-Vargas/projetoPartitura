@@ -9,14 +9,16 @@
 #import <AVFoundation/AVFoundation.h>
 #import "metronomo.h"
 
-@interface ViewController : UIViewController{
-    AVAudioPlayer *audioPlayer;
+@interface ViewController: UIViewController<UITextFieldDelegate>{
 }
+
 @property (weak, nonatomic) IBOutlet UITextField *numCadencia;
 @property (weak, nonatomic) IBOutlet UITextField *numCompasso;
 @property (nonatomic, strong) metronomo * metronomo;
 @property (weak, nonatomic) IBOutlet UIImageView *numero;
 @property (weak, nonatomic) IBOutlet UIImageView *lanca;
+
+
 
 -(IBAction)comecar:(id)sender;
 -(IBAction)parar:(id)sender;

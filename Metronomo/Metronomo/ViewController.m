@@ -49,13 +49,19 @@
     NSLog(@"estou na parar");
     
 }
+-(void) configuraImagem{
+    
+    self.lanca.layer.anchorPoint = CGPointMake(0, 1);
+
+}
 
 -(void) myAnimate{
+    [self configuraImagem];
     NSLog(@"estou na animate");
     CABasicAnimation *apontar = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     [apontar setDelegate:self];
-    [apontar setToValue: [NSNumber numberWithFloat:3*M_PI/2]]; // o quanto ele vai rodar (fazer funcao para calcular)
-    [apontar setDuration: 1.0];
+    [apontar setToValue: [NSNumber numberWithFloat:M_PI/2]]; // o quanto ele vai rodar (fazer funcao para calcular)
+    [apontar setDuration: 60/self.cad];
     
     
     CAMediaTimingFunction *tf = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]; //muda o tempo de rotacao
