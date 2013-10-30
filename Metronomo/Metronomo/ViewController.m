@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#define DEGREES_TO_RADIANS(angle) (angle / 180.0 * M_PI)
 
 @interface ViewController ()
 @property(nonatomic) int cad;
@@ -36,8 +37,27 @@
     self.com = [self.numCompasso.text integerValue];
     self.rodando = TRUE;
     self.metronomo =[[metronomo alloc] initWithTimer: self.com andCadencia: self.cad andTick:^{
-        [self virarNumero];
-        [self myAnimate];
+        //[self virarNumero];
+        //[self myAnimate]; //guga
+        /*self.lanca.frame = CGRectMake(0, 0, 0, 0);
+        [self.view addSubview:self.lanca];
+        [self rotateImage:self.lanca duration: 60/self.cad
+                        curve:UIViewAnimationCurveEaseIn degrees:self.metronomo.contador * 20]; //aqui colocar a distancia a ser percorrida
+        */  //tutorial, quase funfa, mas perco o centro da imagem!
+        
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:60/self.cad];
+        [UIView setAnimationCurve: 30];
+        [UIView setAnimationBeginsFromCurrentState:YES];
+        
+        // The transform matrix
+        CGAffineTransform transform =
+        CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(degrees));
+        image.transform = transform;
+        
+        // Commit the changes
+        [UIView commitAnimations];
+        
     }];
     
     [self.metronomo marcarCompasso];
@@ -56,21 +76,52 @@
 }
 
 -(void) myAnimate{
-    [self configuraImagem];
+   // [self configuraImagem];
     NSLog(@"estou na animate");
     CABasicAnimation *apontar = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    
+    
     [apontar setDelegate:self];
     [apontar setToValue: [NSNumber numberWithFloat:M_PI/2]]; // o quanto ele vai rodar (fazer funcao para calcular)
     [apontar setDuration: 60/self.cad];
-    
-    
+    [UIView setAnimationBeginsFromCurrentState:YES];
     CAMediaTimingFunction *tf = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]; //muda o tempo de rotacao
     
     [apontar setTimingFunction: tf];
     
     //aqui devo ligar para a view que vou animar
     [[self.lanca layer] addAnimation:apontar forKey: @"apontarPara"];
+   
+    CGAffineTransform transform =
+    CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(M_PI/2)); //ficar atento com o a rotacao
+    self.lanca.transform = transform;
+    
+    // Commit the changes
+    [UIView commitAnimations];
+
 }
+
+
+
+- (void)rotateImage:(UIImageView *)image duration:(NSTimeInterval)duration
+              curve:(int)curve degrees:(CGFloat)degrees
+{
+    // Setup the animation
+    //image.layer.anchorPoint = CGPointMake(0, 1);
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:duration];
+    [UIView setAnimationCurve:curve];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    
+    // The transform matrix
+    CGAffineTransform transform =
+    CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(degrees));
+    image.transform = transform;
+    
+    // Commit the changes
+    [UIView commitAnimations];
+}
+
 -(NSString*) numNome{
     switch (self.metronomo.contador){
         
