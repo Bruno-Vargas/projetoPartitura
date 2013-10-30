@@ -143,6 +143,8 @@
 				0D83135B18211C50009FCD52 /* Afinador.m */,
 				0D83135D18211C88009FCD52 /* AudioController.h */,
 				0D83135E18211C88009FCD52 /* AudioController.m */,
+				F98A1B23181EE7180051CF8B /* metronomo.h */,
+				F98A1B24181EE7180051CF8B /* metronomo.m */,
 				0D83136018211CCF009FCD52 /* PitchDetector.h */,
 				0D83136118211CCF009FCD52 /* PitchDetector.m */,
 			);
@@ -152,6 +154,10 @@
 		0D83135918211771009FCD52 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				DFCE0589181EC6CB0085B616 /* MetronomoViewController.h */,
+				DFCE058A181EC6CB0085B616 /* MetronomoViewController.m */,
+				0D83136318211EBF009FCD52 /* AfinadorViewController.h */,
+				0D83136418211EBF009FCD52 /* AfinadorViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -198,8 +204,6 @@
 				DFB930F31819805700401180 /* view */,
 				DFB930CB1819803E00401180 /* AppDelegate.h */,
 				DFB930CC1819803E00401180 /* AppDelegate.m */,
-				F98A1B23181EE7180051CF8B /* metronomo.h */,
-				F98A1B24181EE7180051CF8B /* metronomo.m */,
 				DFB930D41819803E00401180 /* Images.xcassets */,
 				DFB930C31819803E00401180 /* Supporting Files */,
 			);
@@ -238,13 +242,9 @@
 		DFB930F31819805700401180 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				DFCE0589181EC6CB0085B616 /* MetronomoViewController.h */,
-				DFCE058A181EC6CB0085B616 /* MetronomoViewController.m */,
 				DFB930CE1819803E00401180 /* Main.storyboard */,
 				F98A1B1F181EE3580051CF8B /* cifra.jpg */,
 				F98A1B21181EE3600051CF8B /* gifs-animados-musicas-4.gif */,
-				0D83136318211EBF009FCD52 /* AfinadorViewController.h */,
-				0D83136418211EBF009FCD52 /* AfinadorViewController.m */,
 			);
 			name = view;
 			sourceTree = "<group>";

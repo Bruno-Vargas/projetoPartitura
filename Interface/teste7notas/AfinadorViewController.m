@@ -163,6 +163,10 @@
 - (IBAction)bIniciar:(id)sender {
     
 
+    //gambiarra.. para que ao clicar em inicar, ele sempre destrua os objetos.. e crie novos...
+     [self bParar:(id)sender];
+    
+    
     audioManager = [AudioController sharedAudioManager];
     audioManager.delegate = self;
     autoCorrelator = [[PitchDetector alloc] initWithSampleRate:audioManager.audioFormat.mSampleRate lowBoundFreq:30 hiBoundFreq:4500 andDelegate:self];
