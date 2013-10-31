@@ -113,7 +113,7 @@
             return @"oito";
             break;
         case 8:
-            return @"nove";
+            NSLog(@"9");
             break;
         case 9:
             return @"dez";

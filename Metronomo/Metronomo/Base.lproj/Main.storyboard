@@ -62,27 +62,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dvw-wP-zSp">
-                                <rect key="frame" x="109" y="392" width="102" height="72"/>
+                                <rect key="frame" x="109" y="330" width="102" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wAE-eS-dUI">
-                                <rect key="frame" x="20" y="137" width="277" height="75"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lan_a.png" translatesAutoresizingMaskIntoConstraints="NO" id="bLE-XY-Zu8">
+                                <rect key="frame" x="95" y="122" width="104" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="lanca" destination="bLE-XY-Zu8" id="Zle-2b-Hd4"/>
                         <outlet property="numCadencia" destination="yY8-Fq-KMn" id="32R-hS-oOL"/>
                         <outlet property="numCompasso" destination="wQQ-2B-24Y" id="le3-6f-LXF"/>
                         <outlet property="numero" destination="dvw-wP-zSp" id="Rro-1g-gmf"/>
-                        <outlet property="percurso" destination="wAE-eS-dUI" id="y4T-Zn-nOU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Lan_a.png" width="300" height="300"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

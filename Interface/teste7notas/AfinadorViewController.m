@@ -7,11 +7,8 @@
 //
 
 #import "AfinadorViewController.h"
-#import "apontador.h"
 
 @interface AfinadorViewController ()
-
-@property (nonatomic, strong) apontador* bolinha;
 
 @end
 
@@ -30,7 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.bolinha = [[apontador alloc] initWithValor:0 and:0] ;
+
+    
 }
 
 
@@ -95,7 +93,7 @@
     
     
     self.lFrequencia.text = [NSString stringWithFormat:@"%4.3f Hz", value];
-    [self atualizaApontador: (int)value % 61  andTempo: 0.4]; // Rodrigo, mudar esta linha de código !!!!!!!!!!!!!!!!!!!!!!------------>
+    
     
     
     
@@ -164,8 +162,11 @@
 
 - (IBAction)bIniciar:(id)sender {
     
+
     //gambiarra.. para que ao clicar em inicar, ele sempre destrua os objetos.. e crie novos...
      [self bParar:(id)sender];
+    
+    
     audioManager = [AudioController sharedAudioManager];
     audioManager.delegate = self;
     autoCorrelator = [[PitchDetector alloc] initWithSampleRate:audioManager.audioFormat.mSampleRate lowBoundFreq:30 hiBoundFreq:4500 andDelegate:self];
@@ -174,6 +175,11 @@
     self.auxContTempo=0;
     
     self.objAfinador = [[Afinador alloc]init];
+
+   
+    
+
+    
 
 }
 
@@ -194,8 +200,7 @@
     self.lNotaAtual.text = @"";
     self.lNotaProxima.text = @"";
     
-    //voltar a bolinha para a origem!
-    [self atualizaApontador:0 andTempo: 1]; //demora um segundo para ele voltar a origem;
+    
     
 }
 
@@ -206,25 +211,9 @@
     
 }
 
--(void) atualizaApontador: (float) coordenadaY andTempo: (float) tempo{
-    CGRect newFrame;
-    UIImageView *bolinhaImagem = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bolinha.png"]];
-    bolinhaImagem.frame = CGRectMake(self.bolinha.coordenadaX, self.bolinha.coordenadaY, 74, 79);
-    newFrame = CGRectMake(0 , coordenadaY, 74, 79);
-    [self.percurso addSubview:bolinhaImagem];
-    
-    
-    [UIView animateWithDuration: tempo  //colocar o intervalo de tempo entre uma atualizacao da tela e outra!
-                          delay:0
-                        options: UIViewAnimationOptionCurveEaseOut
-                     animations:^{
-                         
-                         bolinhaImagem.frame = newFrame;
-                         [self.bolinha atualizarCoordenadas:self.bolinha.coordenadaX and:coordenadaY];
-                     }
-                     completion: ^(BOOL anim){
-                         [bolinhaImagem removeFromSuperview];
-                     }];
-}
+
+
+
+
 
 @end

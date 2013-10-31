@@ -7,16 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "apontador.h"
-
-#define DEGREES_TO_RADIANS(angle) (angle / 180.0 * M_PI)
-static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 @interface ViewController ()
 @property(nonatomic) int cad;
 @property(nonatomic) int com;
 @property(nonatomic) BOOL rodando;
-@property(nonatomic) apontador* bolinha;
 @end
 
 @implementation ViewController
@@ -25,11 +20,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    self.bolinha = [[apontador alloc] initWithValor:0 and:0] ;
-
-}
-
+    }
 
 - (void)didReceiveMemoryWarning
 {
@@ -45,32 +36,10 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     self.com = [self.numCompasso.text integerValue];
     self.rodando = TRUE;
     self.metronomo =[[metronomo alloc] initWithTimer: self.com andCadencia: self.cad andTick:^{
-        
-        {
-           
-            
-            CGRect newFrame;
-            UIImageView *bolinhaImagem = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bolinha.png"]];
-                bolinhaImagem.frame = CGRectMake(self.bolinha.coordenadaX, self.bolinha.coordenadaY, 74, 79);
-                newFrame = CGRectMake(20 +  self.metronomo.contador*20 , 0, 74, 79);
-                [self.percurso addSubview:bolinhaImagem];
-            
-            
-            [UIView animateWithDuration:60/self.metronomo.cadencia
-                                  delay:0
-                                options: UIViewAnimationOptionCurveEaseOut
-                             animations:^{
-                                 
-                                 bolinhaImagem.frame = newFrame;
-                                 [self.bolinha atualizarCoordenadas:(20 + self.metronomo.contador*20) and:self.bolinha.coordenadaY];
-                             }
-                             completion: ^(BOOL anim){
-                                 [bolinhaImagem removeFromSuperview];
-                             }];
-        }
-
-
+        [self virarNumero];
+        [self myAnimate];
     }];
+    
     [self.metronomo marcarCompasso];
     
 }
@@ -82,54 +51,26 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 }
 -(void) configuraImagem{
     
-    //self.lanca.layer.anchorPoint = CGPointMake(0, 1);
+    self.lanca.layer.anchorPoint = CGPointMake(0, 1);
 
 }
 
 -(void) myAnimate{
-   // [self configuraImagem];
+    [self configuraImagem];
     NSLog(@"estou na animate");
     CABasicAnimation *apontar = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-    
-    
     [apontar setDelegate:self];
     [apontar setToValue: [NSNumber numberWithFloat:M_PI/2]]; // o quanto ele vai rodar (fazer funcao para calcular)
     [apontar setDuration: 60/self.cad];
-    [UIView setAnimationBeginsFromCurrentState:YES];
+    
+    
     CAMediaTimingFunction *tf = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]; //muda o tempo de rotacao
     
     [apontar setTimingFunction: tf];
     
     //aqui devo ligar para a view que vou animar
-  //   [[self.lanca layer] addAnimation:apontar forKey: @"apontarPara"];
-   
-   // CGAffineTransform transform =
-    CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(M_PI/2)); //ficar atento com o a rotacao
-    //self.lanca.transform = transform;
-    
-  \
+    [[self.lanca layer] addAnimation:apontar forKey: @"apontarPara"];
 }
-
-
-
-- (void)rotateImage:(UIImageView *)image duration:(NSTimeInterval)duration
-              curve:(int)curve degrees:(CGFloat)degrees
-{
-    // Setup the animation
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:duration];
-    [UIView setAnimationCurve:curve];
-    [UIView setAnimationBeginsFromCurrentState:YES];
-    
-    // The transform matrix
-    CGAffineTransform transform =
-    CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(degrees));
-    image.transform = transform;
-    
-    // Commit the changes
-    [UIView commitAnimations];
-}
-
 -(NSString*) numNome{
     switch (self.metronomo.contador){
         
