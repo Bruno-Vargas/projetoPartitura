@@ -7,12 +7,16 @@
 //
 
 #import "ViewController.h"
+#import "apontador.h"
+
 #define DEGREES_TO_RADIANS(angle) (angle / 180.0 * M_PI)
+static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 @interface ViewController ()
 @property(nonatomic) int cad;
 @property(nonatomic) int com;
 @property(nonatomic) BOOL rodando;
+@property(nonatomic) apontador* bolinha;
 @end
 
 @implementation ViewController
@@ -21,7 +25,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    }
+    
+    self.bolinha = [[apontador alloc] initWithValor:0 and:0] ;
+
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -37,23 +45,32 @@
     self.com = [self.numCompasso.text integerValue];
     self.rodando = TRUE;
     self.metronomo =[[metronomo alloc] initWithTimer: self.com andCadencia: self.cad andTick:^{
-        //[self virarNumero];
-        //[self myAnimate]; //guga
-        /*self.lanca.frame = CGRectMake(0, 0, 0, 0);
-        [self.view addSubview:self.lanca];
-        [self rotateImage:self.lanca duration: 60/self.cad
-                        curve:UIViewAnimationCurveEaseIn degrees:self.metronomo.contador * 20]; //aqui colocar a distancia a ser percorrida
-        */  //tutorial, quase funfa, mas perco o centro da imagem!
         
-        CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-        animation.fromValue = [NSNumber numberWithFloat:0.0f];
-        animation.toValue = [NSNumber numberWithFloat: 0.9];
-        animation.duration = 60/self.cad;
-        animation.repeatCount = 0;
-        [self.lanca.layer addAnimation:animation forKey:@"SpinAnimation"];
-        
+        {
+           
+            
+            CGRect newFrame;
+            UIImageView *bolinhaImagem = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bolinha.png"]];
+                bolinhaImagem.frame = CGRectMake(self.bolinha.coordenadaX, self.bolinha.coordenadaY, 74, 79);
+                newFrame = CGRectMake(20 +  self.metronomo.contador*20 , 0, 74, 79);
+                [self.percurso addSubview:bolinhaImagem];
+            
+            
+            [UIView animateWithDuration:60/self.metronomo.cadencia
+                                  delay:0
+                                options: UIViewAnimationOptionCurveEaseOut
+                             animations:^{
+                                 
+                                 bolinhaImagem.frame = newFrame;
+                                 [self.bolinha atualizarCoordenadas:(20 + self.metronomo.contador*20) and:self.bolinha.coordenadaY];
+                             }
+                             completion: ^(BOOL anim){
+                                 [bolinhaImagem removeFromSuperview];
+                             }];
+        }
+
+
     }];
-    
     [self.metronomo marcarCompasso];
     
 }
@@ -65,7 +82,7 @@
 }
 -(void) configuraImagem{
     
-    self.lanca.layer.anchorPoint = CGPointMake(0, 1);
+    //self.lanca.layer.anchorPoint = CGPointMake(0, 1);
 
 }
 
@@ -84,15 +101,13 @@
     [apontar setTimingFunction: tf];
     
     //aqui devo ligar para a view que vou animar
-    [[self.lanca layer] addAnimation:apontar forKey: @"apontarPara"];
+  //   [[self.lanca layer] addAnimation:apontar forKey: @"apontarPara"];
    
-    CGAffineTransform transform =
+   // CGAffineTransform transform =
     CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(M_PI/2)); //ficar atento com o a rotacao
-    self.lanca.transform = transform;
+    //self.lanca.transform = transform;
     
-    // Commit the changes
-    [UIView commitAnimations];
-
+  \
 }
 
 
@@ -101,7 +116,6 @@
               curve:(int)curve degrees:(CGFloat)degrees
 {
     // Setup the animation
-    //image.layer.anchorPoint = CGPointMake(0, 1);
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:duration];
     [UIView setAnimationCurve:curve];
