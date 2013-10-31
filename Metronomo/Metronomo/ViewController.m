@@ -45,18 +45,12 @@
                         curve:UIViewAnimationCurveEaseIn degrees:self.metronomo.contador * 20]; //aqui colocar a distancia a ser percorrida
         */  //tutorial, quase funfa, mas perco o centro da imagem!
         
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:60/self.cad];
-        [UIView setAnimationCurve: 30];
-        [UIView setAnimationBeginsFromCurrentState:YES];
-        
-        // The transform matrix
-        CGAffineTransform transform =
-        CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(degrees));
-        image.transform = transform;
-        
-        // Commit the changes
-        [UIView commitAnimations];
+        CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+        animation.fromValue = [NSNumber numberWithFloat:0.0f];
+        animation.toValue = [NSNumber numberWithFloat: 0.9];
+        animation.duration = 60/self.cad;
+        animation.repeatCount = 0;
+        [self.lanca.layer addAnimation:animation forKey:@"SpinAnimation"];
         
     }];
     
