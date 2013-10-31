@@ -30,6 +30,7 @@
 @property (nonatomic) int auxContTempo;
 @property (nonatomic) double mili;
 
+@property (weak, nonatomic) IBOutlet UIImageView *percurso;
 
 @property (strong, nonatomic) IBOutlet UILabel *lOitava;
 @property (strong, nonatomic) IBOutlet UILabel *lFrequencia;

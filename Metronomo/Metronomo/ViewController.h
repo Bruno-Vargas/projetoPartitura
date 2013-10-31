@@ -16,7 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *numCompasso;
 @property (nonatomic, strong) metronomo * metronomo;
 @property (weak, nonatomic) IBOutlet UIImageView *numero;
-@property (weak, nonatomic) IBOutlet UIImageView *lanca;
+@property (weak, nonatomic) IBOutlet UIImageView *percurso;
+
 
 
 
