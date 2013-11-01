@@ -38,6 +38,8 @@
 		F9E80CF818228C0C009BCEC8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E80CF718228C0C009BCEC8 /* QuartzCore.framework */; };
 		F9E80D021823E0AF009BCEC8 /* dez.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E80D011823E0AF009BCEC8 /* dez.png */; };
 		F9E80D041823E2E0009BCEC8 /* regua.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E80D031823E2E0009BCEC8 /* regua.png */; };
+		F9E80D061823EAFF009BCEC8 /* bemol.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E80D051823EAFF009BCEC8 /* bemol.png */; };
+		F9E80D081823EB3F009BCEC8 /* sustenido.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E80D071823EB3F009BCEC8 /* sustenido.png */; };
 		F9F7C9CE18200D7F0077F9E6 /* cinco.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9C118200D7F0077F9E6 /* cinco.png */; };
 		F9F7C9D018200D7F0077F9E6 /* dois.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9C318200D7F0077F9E6 /* dois.png */; };
 		F9F7C9D118200D7F0077F9E6 /* doze.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9C418200D7F0077F9E6 /* doze.png */; };
@@ -105,6 +107,8 @@
 		F9E80CF718228C0C009BCEC8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F9E80D011823E0AF009BCEC8 /* dez.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dez.png; sourceTree = "<group>"; };
 		F9E80D031823E2E0009BCEC8 /* regua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = regua.png; sourceTree = "<group>"; };
+		F9E80D051823EAFF009BCEC8 /* bemol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bemol.png; sourceTree = "<group>"; };
+		F9E80D071823EB3F009BCEC8 /* sustenido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenido.png; sourceTree = "<group>"; };
 		F9F7C9C118200D7F0077F9E6 /* cinco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cinco.png; sourceTree = "<group>"; };
 		F9F7C9C318200D7F0077F9E6 /* dois.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dois.png; sourceTree = "<group>"; };
 		F9F7C9C418200D7F0077F9E6 /* doze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doze.png; sourceTree = "<group>"; };
@@ -257,6 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				DFB930CE1819803E00401180 /* Main.storyboard */,
+				F9E80D071823EB3F009BCEC8 /* sustenido.png */,
+				F9E80D051823EAFF009BCEC8 /* bemol.png */,
 				F9E80D031823E2E0009BCEC8 /* regua.png */,
 				F98A1B1F181EE3580051CF8B /* cifra.jpg */,
 				F98A1B21181EE3600051CF8B /* gifs-animados-musicas-4.gif */,
@@ -373,11 +379,13 @@
 				F9F7C9D018200D7F0077F9E6 /* dois.png in Resources */,
 				0D8313671822D5EB009FCD52 /* bolinha.png in Resources */,
 				F9F7C9D218200D7F0077F9E6 /* nove.png in Resources */,
+				F9E80D061823EAFF009BCEC8 /* bemol.png in Resources */,
 				F9F7C9D718200D7F0077F9E6 /* sete.png in Resources */,
 				F9F7C9D318200D7F0077F9E6 /* oito.png in Resources */,
 				F9F7C9CE18200D7F0077F9E6 /* cinco.png in Resources */,
 				F9E80D021823E0AF009BCEC8 /* dez.png in Resources */,
 				F96782B3181FCCE400D35CB4 /* tick.mp3 in Resources */,
+				F9E80D081823EB3F009BCEC8 /* sustenido.png in Resources */,
 				DFB930D51819803E00401180 /* Images.xcassets in Resources */,
 				F96782B4181FCCE400D35CB4 /* toc.mp3 in Resources */,
 				F9F7C9DA18200D7F0077F9E6 /* zero.png in Resources */,

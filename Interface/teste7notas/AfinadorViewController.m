@@ -175,7 +175,7 @@
 
     
    // NSLog(@"posicao y %f", self.bolinha.coordenadaY);
-    self.bolinhaImagem.frame = CGRectMake(5, [self calculaCoordenada: self.objAfinador.diferencaFreqReal], 23, 30);
+    self.bolinhaImagem.frame = CGRectMake(5, [self calculaCoordenada: self.objAfinador.diferencaFreqReal], 11, 15);
     
     //add bolinha na subview
     [self.vBolinha addSubview:self.bolinhaImagem];
@@ -186,7 +186,7 @@
 }
 //funcao converte a distancia da nota musical para a localizacao da bolinha
 -(float) calculaCoordenada: (float) frequencia{
-    return 92 + frequencia * 32;
+    return 122 + frequencia * 32;
 }
 
 @end
