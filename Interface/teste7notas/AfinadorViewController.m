@@ -31,15 +31,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.bolinha = [[apontador alloc] initWithValor:0 and:0] ;
-    
-  //  UIImageView *bolinhaImagem = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bolinha.png"]];
-//    bolinhaImagem.frame = CGRectMake(0, 50, 74, 79);
-
-    self.posicaoY = 0.00;
-    //instancia uma nova imagem
-    self.bolinhaImagem = [[UIImageView alloc]
-                                  //passa o nome/caminho da imagem para alocar
-                                  initWithImage:[UIImage imageNamed:@"bolinha.png"]];
+    self.bolinhaImagem = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bolinha.png"]];
 
 }
 
@@ -105,14 +97,9 @@
     
     
     self.lFrequencia.text = [NSString stringWithFormat:@"%4.3f Hz", value];
-//    [self atualizaApontador: 200  andTempo: 0.4]; // Rodrigo, mudar esta linha de código !!!!!!!!!!!!!!!!!!!!!!------------>
-  [self performSelector:@selector(updateTime) withObject:nil afterDelay:0.1];
+    [self performSelector:@selector(atualizarBolinha) withObject:nil afterDelay:0.1];
     
-    
-
     [self.objAfinador calculaAfinacao:self.lFrequencia.text];
-
-
 
     //parar tempo
     if(self.auxContTempo==1){
@@ -120,13 +107,6 @@
 
         //verificar diferenca de tempo
         self.mili = [self timeElapsedInSeconds] * 1000.0f;
-//        printf("tempo %f\n", self.mili);
-
-
-//        NSLog(@"Nota mais afinada -> %f", [self.objAfinador.notaMaisAfinada doubleValue]);
-
-//        NSLog(@"Nota Atual -> %@ Nota Anterior -> %@ Nota Proxima -> %@", self.objAfinador.notaAtual, self.objAfinador.notaAnterior, self.objAfinador.notaProxima);
-
 
     }
     
@@ -137,9 +117,7 @@
     
     
     NSLog(@"freq reduzida -> %f", self.objAfinador.freqReduzida);
-//    self.bolinhaImagem = nil;
-    
-    self.posicaoY = self.objAfinador.freqReduzida;
+    [self.bolinha  atualizarCoordenadas: 0 and: self.objAfinador.freqReduzida];
     
     //preencher a nota atual.. a anterior e a proxima
     self.lNotaAnterior.text = self.objAfinador.notaAnterior;
@@ -219,44 +197,31 @@
 }
 
 
--(void) updateTime{
+-(void) atualizarBolinha{
 
     
-    NSLog(@"posicao y %f", self.posicaoY);
-    //seta ponto de origem e termino de onde a carta eh inserida
-    self.bolinhaImagem.frame = CGRectMake(0, self.posicaoY*4.86, 23, 30);
+    NSLog(@"posicao y %f", self.bolinha.coordenadaY);
+    self.bolinhaImagem.frame = CGRectMake(0, [self calculaCoordenada: [self.objAfinador.notaMaisAfinada doubleValue]], 23, 30);
     
-//    //seta ponto de origem e termino de onde a carta eh redesenhada com a animacao
-//    CGRect newFrame = CGRectMake(0, 0, 23, 30);
-//
-//    //add a carta na sub-view demarcada
-    [self.vBolinha addSubview:self.bolinhaImagem];
-//
-//    //cria animacao de insercao da carta do ponto inicial ao ponto final
-//    [UIView animateWithDuration:1
-//                          delay:0
-//                        options: UIViewAnimationOptionCurveEaseIn
-//                     animations:^{
-//                         bolinhaImagem.frame = newFrame;
-//                     }
-//                     completion: nil];
+        [self.vBolinha addSubview:self.bolinhaImagem];
     
-    
-    [self performSelector:@selector(updateTime) withObject:nil afterDelay:1.0];
+    [self performSelector:@selector(atualizarBolinha) withObject:nil afterDelay:1.0];
 
     
 }
-
+//funcao converte a distancia da nota musical para a localizacao da bolinha
+-(float) calculaCoordenada: (float) frequencia{
+    return 150 + frequencia * 32;
+}
 
 //-(void) atualizaApontador: (float) coordenadaY andTempo: (float) tempo{
 //
 //    CGRect newFrame;
-//    UIImageView *bolinhaImagem = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bolinha.png"]];
-//    bolinhaImagem.frame = CGRectMake(0, self.bolinha.coordenadaY, 74, 79);
+//    UIImageView *bolinhaImagem2 = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bolinha.png"]];
+//    bolinhaImagem2.frame = CGRectMake(0, self.bolinha.coordenadaY, 74, 79);
 //
-//    NSLog(@"coordenada y -> %d", self.bolinha.coordenadaY);
 //    newFrame = CGRectMake(0 , coordenadaY, 74, 79);
-//    [self.percurso addSubview:bolinhaImagem];
+//    [self.percurso addSubview:bolinhaImagem2];
 //    
 //    
 //    [UIView animateWithDuration: tempo  //colocar o intervalo de tempo entre uma atualizacao da tela e outra!
@@ -264,11 +229,11 @@
 //                        options: UIViewAnimationOptionCurveEaseOut
 //                     animations:^{
 //                         
-//                         bolinhaImagem.frame = newFrame;
+//                         bolinhaImagem2.frame = newFrame;
 //                         [self.bolinha atualizarCoordenadas:self.bolinha.coordenadaX and:coordenadaY];
 //                     }
 //                     completion: ^(BOOL anim){
-//                         [bolinhaImagem removeFromSuperview];
+//                         [bolinhaImagem2 removeFromSuperview];
 //                     }];
 //}
 

@@ -11,16 +11,16 @@
 @implementation apontador
 
 
-- (id) initWithValor:(int)valorX and:(int)valorY{
+- (id) initWithValor:(float)valorX and:(float)valorY{
     self.coordenadaX = valorX;
     self.coordenadaY = valorY;
-    self.coordenadaAntigaX = 0;
-    self.coordenadaAntigaY = 0;
+    self.coordenadaAntigaX = 0.0;
+    self.coordenadaAntigaY = 0.0;
     
     return self;
 }
 
-- (void) atualizarCoordenadas:(int)novoValorX and:(int)novoValorY{
+- (void) atualizarCoordenadas:(float)novoValorX and:(float)novoValorY{
     self.coordenadaAntigaX = self.coordenadaX;
     self.coordenadaAntigaY = self.coordenadaY;
     self.coordenadaX = novoValorX;

@@ -10,12 +10,12 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 @interface apontador : NSObject
-@property (nonatomic) int coordenadaX;
-@property (nonatomic) int coordenadaY;
-@property (nonatomic) int coordenadaAntigaX;
-@property (nonatomic) int coordenadaAntigaY;
+@property (nonatomic) float coordenadaX;
+@property (nonatomic) float coordenadaY;
+@property (nonatomic) float coordenadaAntigaX;
+@property (nonatomic) float coordenadaAntigaY;
 
--(id) initWithValor: (int)valorX and: (int)valorY;
--(void) atualizarCoordenadas: (int) novoValorX and: (int) novoValorY;
+-(id) initWithValor: (float)valorX and: (float)valorY;
+-(void) atualizarCoordenadas: (float) novoValorX and: (float) novoValorY;
 
 @end
