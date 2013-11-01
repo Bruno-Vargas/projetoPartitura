@@ -30,6 +30,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    
+    //instanciar imagem bolinha
     self.bolinha = [[apontador alloc] initWithValor:0 and:0] ;
     self.bolinhaImagem = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bolinha.png"]];
 
@@ -57,14 +60,8 @@
     double value = frequency;
     
     
-    
-    //############ DATA SMOOTHING ###############
-    //###     The following code averages previous values  ##
-    //###  received by the pitch follower by using a             ##
-    //###  median filter. Provides sub cent precision!          ##
-    //#############################################
-
-    
+    //Receber frequencia e aumentar precisao..
+    //utilizando um filtro com a media da amplitude
     NSNumber *nsnum = [NSNumber numberWithDouble:value];
     [medianPitchFollow insertObject:nsnum atIndex:0];
     
@@ -96,27 +93,21 @@
     }
     
     
+    
+    //inserir frequencia recebida no campo FREQUENCIA
     self.lFrequencia.text = [NSString stringWithFormat:@"%4.3f Hz", value];
+
+    //chamar animacao da bolinha para alocar ela na frequencia atual
     [self performSelector:@selector(atualizarBolinha) withObject:nil afterDelay:0.1];
     
+    //chamar metodo para determinar a nota musica
     [self.objAfinador calculaAfinacao:self.lFrequencia.text];
 
-    //parar tempo
-    if(self.auxContTempo==1){
-        [self stopTimer];
 
-        //verificar diferenca de tempo
-        self.mili = [self timeElapsedInSeconds] * 1000.0f;
-
-    }
-    
-    
     //preencher o numero da oitava que a nota esta
     self.lOitava.text = [NSString stringWithFormat:@"%2.0f",self.objAfinador.numOitava];
     
-    
-    
-   // NSLog(@"freq reduzida -> %f", self.objAfinador.freqReduzida);
+ 
     [self.bolinha  atualizarCoordenadas: 0 and: self.objAfinador.freqReduzida];
     
     //preencher a nota atual.. a anterior e a proxima
@@ -124,27 +115,9 @@
     self.lNotaAtual.text = self.objAfinador.notaAtual;
     self.lNotaProxima.text = self.objAfinador.notaProxima;
     
-
-    //apos a primeria passagem.. starta tempo
-    [self startTimer];
-    self.auxContTempo=1;
-    
-    
-   
     
 }
 
-- (double) timeElapsedInSeconds {
-    return [self.end timeIntervalSinceDate:self.start];
-}
-
-- (void) startTimer {
-    self.start = [NSDate date];
-}
-
-- (void) stopTimer {
-    self.end = [NSDate date];
-}
 
 
 - (void) receivedAudioSamples:(SInt16 *)samples length:(int)len {
@@ -154,8 +127,10 @@
 
 - (IBAction)bIniciar:(id)sender {
     
-    //gambiarra.. para que ao clicar em inicar, ele sempre destrua os objetos.. e crie novos...
-     [self bParar:(id)sender];
+    //sempre ao clicar em iniciar.. clicar em parar... assim evita problemas de nao iniciar a captura de audio/frequencia
+    
+    [self bParar:(id)sender];
+    
     audioManager = [AudioController sharedAudioManager];
     audioManager.delegate = self;
     autoCorrelator = [[PitchDetector alloc] initWithSampleRate:audioManager.audioFormat.mSampleRate lowBoundFreq:30 hiBoundFreq:4500 andDelegate:self];
@@ -171,21 +146,20 @@
 - (IBAction)bParar:(id)sender {
     
     
+    //resetar objetos ao parar
     self.objAfinador = nil;
     audioManager = nil;
     autoCorrelator = nil;
     
+    
+    //zerar campos ao parar
     self.lFrequencia.text = @"0.0 Hz";
-
     self.lOitava.text = @"0";
     
     
     self.lNotaAnterior.text = @"";
     self.lNotaAtual.text = @"";
     self.lNotaProxima.text = @"";
-    
-    //voltar a bolinha para a origem!
-//    [self atualizaApontador:0 andTempo: 1]; //demora um segundo para ele voltar a origem;
     
 }
 
@@ -201,9 +175,10 @@
 
     
    // NSLog(@"posicao y %f", self.bolinha.coordenadaY);
-    self.bolinhaImagem.frame = CGRectMake(0, [self calculaCoordenada: self.objAfinador.diferencaFreqReal], 23, 30);
+    self.bolinhaImagem.frame = CGRectMake(5, [self calculaCoordenada: self.objAfinador.diferencaFreqReal], 23, 30);
     
-        [self.vBolinha addSubview:self.bolinhaImagem];
+    //add bolinha na subview
+    [self.vBolinha addSubview:self.bolinhaImagem];
     
     [self performSelector:@selector(atualizarBolinha) withObject:nil afterDelay:1.0];
 
@@ -211,30 +186,7 @@
 }
 //funcao converte a distancia da nota musical para a localizacao da bolinha
 -(float) calculaCoordenada: (float) frequencia{
-    return 150 + frequencia * 32;
+    return 92 + frequencia * 32;
 }
-
-//-(void) atualizaApontador: (float) coordenadaY andTempo: (float) tempo{
-//
-//    CGRect newFrame;
-//    UIImageView *bolinhaImagem2 = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bolinha.png"]];
-//    bolinhaImagem2.frame = CGRectMake(0, self.bolinha.coordenadaY, 74, 79);
-//
-//    newFrame = CGRectMake(0 , coordenadaY, 74, 79);
-//    [self.percurso addSubview:bolinhaImagem2];
-//    
-//    
-//    [UIView animateWithDuration: tempo  //colocar o intervalo de tempo entre uma atualizacao da tela e outra!
-//                          delay:0
-//                        options: UIViewAnimationOptionCurveEaseOut
-//                     animations:^{
-//                         
-//                         bolinhaImagem2.frame = newFrame;
-//                         [self.bolinha atualizarCoordenadas:self.bolinha.coordenadaX and:coordenadaY];
-//                     }
-//                     completion: ^(BOOL anim){
-//                         [bolinhaImagem2 removeFromSuperview];
-//                     }];
-//}
 
 @end

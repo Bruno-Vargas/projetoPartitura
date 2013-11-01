@@ -48,7 +48,7 @@
 @property (nonatomic) NSDate *end;
 
 
-- (double) timeElapsedInSeconds;
+//- (double) timeElapsedInSeconds;
 
 
 @end

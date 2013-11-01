@@ -70,16 +70,15 @@
     self.menorFrequencia = [self.notasMusicais[1][0] doubleValue];
     self.maiorFrequencia = [self.notasMusicais[1][([self.notasMusicais[1] count]-1)] doubleValue ];
     
-    //utilizada na comparacao entre as notas mais proximas de zero.. ou seja.. a mais afinada.. melhor para regular assim.. usa 1000 como padrao.. para que busque na matriz moduloMatrizAfinada a mais afinada
-    
-    
-    //    NSLog(@"menor -> %f maior %f", self.menorFrequencia, self.maiorFrequencia);
-    
 }
 
 
 -(void) calculaNumOitava:(double)freqAtual{
+  
+    //oitva sempre inicia em 1
     self.numOitava = 1;
+    
+    //faz divisoes sucessivas contanto a qtde de oitavas que possui na frequencia
     while(freqAtual > self.maiorFrequencia){
         freqAtual /= 2;
         self.numOitava++;
@@ -88,17 +87,22 @@
     
     
 }
+
+//indice auxiliar para ajudar na localizacao de valores de frequencia das notas
 int aux_indice = 0;
 
 //metodo resposavel por receber a freq atual.. e verificar se a nota esta afinada ou nao
 -(double) calculaAfinacao: (NSString *) freqAtual{
     
+    //devido a comparacoes constantes entre os valores das notas.. inicia essa variavel para manter um parametro na comparacao
     self.notaMaisAfinada = @"1000";
     
     
     //buscar numero de oitavas que esta
     [self calculaNumOitava:[freqAtual doubleValue]];
     
+    
+    //guardar o valor de frequencia real.. usada quando for necessario saber a diferenca negativa de uma nota
     self.freqReal = [[NSMutableArray alloc]init];
     for(int i=0; i< [self.notasMusicais[0] count];i++){
         
@@ -106,10 +110,6 @@ int aux_indice = 0;
         
     }
 
-   
-    
-    //percorrer matriz -> notasMusicais e efetuar uma subtracao com a frequenciaReduzida.. o modulo do menor resultado é a nota a ser tocada
-    
     
     
     //realoca matriz para efetuar calculos de frequencias mais proximas das notas
@@ -117,7 +117,7 @@ int aux_indice = 0;
     self.moduloMatrizAfinada = [[NSMutableArray alloc]init];
     
     
-    
+    //inicio da busca pela nota mais afinada.. a mais proxima de zero - 0
     for(int i=0; i< [self.notasMusicais[0] count];i++){
         self.matrizAfinada[i] = [NSString stringWithFormat:@"%f", [self.notasMusicais[1][i] doubleValue]- self.freqReduzida];
         
