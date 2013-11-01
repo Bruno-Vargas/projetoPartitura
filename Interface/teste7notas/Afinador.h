@@ -18,6 +18,9 @@
 
 @property (nonatomic) double rangeToleranciaAfinacao;
 
+@property (nonatomic, strong) NSMutableArray *freqReal;
+@property (nonatomic) double diferencaFreqReal;
+
 @property (nonatomic) double freqReduzida;
 
 @property (nonatomic) double menorFrequencia;

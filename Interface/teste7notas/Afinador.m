@@ -99,6 +99,14 @@ int aux_indice = 0;
     //buscar numero de oitavas que esta
     [self calculaNumOitava:[freqAtual doubleValue]];
     
+    self.freqReal = [[NSMutableArray alloc]init];
+    for(int i=0; i< [self.notasMusicais[0] count];i++){
+        
+        self.freqReal[i] = [NSString stringWithFormat:@"%f",[self.notasMusicais[1][i] doubleValue]-self.freqReduzida];
+        
+    }
+
+   
     
     //percorrer matriz -> notasMusicais e efetuar uma subtracao com a frequenciaReduzida.. o modulo do menor resultado é a nota a ser tocada
     
@@ -131,13 +139,13 @@ int aux_indice = 0;
             aux_indice = i;
             
         }
-        
-        
     }
     
     
     //passando o nome das notas para as variaveis referentes
     self.notaAtual = self.notasMusicais[0][aux_indice];
+    
+   
     
     //se a nota atual for a primeira nota.. mostrar a ultima nota como anterior
     if(aux_indice==0){
@@ -153,8 +161,8 @@ int aux_indice = 0;
         self.notaProxima = self.notasMusicais[0][aux_indice+1];
     }
     
-    
-    
+    self.diferencaFreqReal = [self.freqReal[aux_indice] doubleValue];
+    NSLog(@"nota -> %f", self.diferencaFreqReal);
     
     return [self.notaMaisAfinada doubleValue];
 }

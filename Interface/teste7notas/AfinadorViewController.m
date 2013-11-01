@@ -116,7 +116,7 @@
     
     
     
-    NSLog(@"freq reduzida -> %f", self.objAfinador.freqReduzida);
+   // NSLog(@"freq reduzida -> %f", self.objAfinador.freqReduzida);
     [self.bolinha  atualizarCoordenadas: 0 and: self.objAfinador.freqReduzida];
     
     //preencher a nota atual.. a anterior e a proxima
@@ -200,8 +200,8 @@
 -(void) atualizarBolinha{
 
     
-    NSLog(@"posicao y %f", self.bolinha.coordenadaY);
-    self.bolinhaImagem.frame = CGRectMake(0, [self calculaCoordenada: [self.objAfinador.notaMaisAfinada doubleValue]], 23, 30);
+   // NSLog(@"posicao y %f", self.bolinha.coordenadaY);
+    self.bolinhaImagem.frame = CGRectMake(0, [self calculaCoordenada: self.objAfinador.diferencaFreqReal], 23, 30);
     
         [self.vBolinha addSubview:self.bolinhaImagem];
     
