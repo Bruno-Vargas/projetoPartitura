@@ -31,6 +31,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.bolinha = [[apontador alloc] initWithValor:0 and:0] ;
+    
+  //  UIImageView *bolinhaImagem = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bolinha.png"]];
+//    bolinhaImagem.frame = CGRectMake(0, 50, 74, 79);
+
+    self.posicaoY = 0.00;
+    //instancia uma nova imagem
+    self.bolinhaImagem = [[UIImageView alloc]
+                                  //passa o nome/caminho da imagem para alocar
+                                  initWithImage:[UIImage imageNamed:@"bolinha.png"]];
+
 }
 
 
@@ -95,8 +105,8 @@
     
     
     self.lFrequencia.text = [NSString stringWithFormat:@"%4.3f Hz", value];
-    [self atualizaApontador: (int)value % 61  andTempo: 0.4]; // Rodrigo, mudar esta linha de código !!!!!!!!!!!!!!!!!!!!!!------------>
-    
+//    [self atualizaApontador: 200  andTempo: 0.4]; // Rodrigo, mudar esta linha de código !!!!!!!!!!!!!!!!!!!!!!------------>
+  [self performSelector:@selector(updateTime) withObject:nil afterDelay:0.1];
     
     
 
@@ -126,8 +136,10 @@
     
     
     
-   // NSLog(@"freq reduzida -> %f", self.objAfinador.freqReduzida);
+    NSLog(@"freq reduzida -> %f", self.objAfinador.freqReduzida);
+//    self.bolinhaImagem = nil;
     
+    self.posicaoY = self.objAfinador.freqReduzida;
     
     //preencher a nota atual.. a anterior e a proxima
     self.lNotaAnterior.text = self.objAfinador.notaAnterior;
@@ -195,7 +207,7 @@
     self.lNotaProxima.text = @"";
     
     //voltar a bolinha para a origem!
-    [self atualizaApontador:0 andTempo: 1]; //demora um segundo para ele voltar a origem;
+//    [self atualizaApontador:0 andTempo: 1]; //demora um segundo para ele voltar a origem;
     
 }
 
@@ -206,25 +218,58 @@
     
 }
 
--(void) atualizaApontador: (float) coordenadaY andTempo: (float) tempo{
-    CGRect newFrame;
-    UIImageView *bolinhaImagem = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bolinha.png"]];
-    bolinhaImagem.frame = CGRectMake(self.bolinha.coordenadaX, self.bolinha.coordenadaY, 74, 79);
-    newFrame = CGRectMake(0 , coordenadaY, 74, 79);
-    [self.percurso addSubview:bolinhaImagem];
+
+-(void) updateTime{
+
+    
+    NSLog(@"posicao y %f", self.posicaoY);
+    //seta ponto de origem e termino de onde a carta eh inserida
+    self.bolinhaImagem.frame = CGRectMake(0, self.posicaoY*4.86, 23, 30);
+    
+//    //seta ponto de origem e termino de onde a carta eh redesenhada com a animacao
+//    CGRect newFrame = CGRectMake(0, 0, 23, 30);
+//
+//    //add a carta na sub-view demarcada
+    [self.vBolinha addSubview:self.bolinhaImagem];
+//
+//    //cria animacao de insercao da carta do ponto inicial ao ponto final
+//    [UIView animateWithDuration:1
+//                          delay:0
+//                        options: UIViewAnimationOptionCurveEaseIn
+//                     animations:^{
+//                         bolinhaImagem.frame = newFrame;
+//                     }
+//                     completion: nil];
     
     
-    [UIView animateWithDuration: tempo  //colocar o intervalo de tempo entre uma atualizacao da tela e outra!
-                          delay:0
-                        options: UIViewAnimationOptionCurveEaseOut
-                     animations:^{
-                         
-                         bolinhaImagem.frame = newFrame;
-                         [self.bolinha atualizarCoordenadas:self.bolinha.coordenadaX and:coordenadaY];
-                     }
-                     completion: ^(BOOL anim){
-                         [bolinhaImagem removeFromSuperview];
-                     }];
+    [self performSelector:@selector(updateTime) withObject:nil afterDelay:1.0];
+
+    
 }
+
+
+//-(void) atualizaApontador: (float) coordenadaY andTempo: (float) tempo{
+//
+//    CGRect newFrame;
+//    UIImageView *bolinhaImagem = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bolinha.png"]];
+//    bolinhaImagem.frame = CGRectMake(0, self.bolinha.coordenadaY, 74, 79);
+//
+//    NSLog(@"coordenada y -> %d", self.bolinha.coordenadaY);
+//    newFrame = CGRectMake(0 , coordenadaY, 74, 79);
+//    [self.percurso addSubview:bolinhaImagem];
+//    
+//    
+//    [UIView animateWithDuration: tempo  //colocar o intervalo de tempo entre uma atualizacao da tela e outra!
+//                          delay:0
+//                        options: UIViewAnimationOptionCurveEaseOut
+//                     animations:^{
+//                         
+//                         bolinhaImagem.frame = newFrame;
+//                         [self.bolinha atualizarCoordenadas:self.bolinha.coordenadaX and:coordenadaY];
+//                     }
+//                     completion: ^(BOOL anim){
+//                         [bolinhaImagem removeFromSuperview];
+//                     }];
+//}
 
 @end

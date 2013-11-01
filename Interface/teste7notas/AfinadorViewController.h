@@ -26,6 +26,10 @@
 @property (nonatomic, strong) Afinador *objAfinador;
 
 
+@property (nonatomic) double posicaoY;
+
+@property (nonatomic, strong) UIImageView *bolinhaImagem;
+@property (strong, nonatomic) IBOutlet UIView *vBolinha;
 
 @property (nonatomic) int auxContTempo;
 @property (nonatomic) double mili;
