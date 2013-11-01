@@ -463,8 +463,6 @@
     <resources>
         <image name="bemol.png" width="100" height="100"/>
         <image name="cifra.jpg" width="829" height="973"/>
-        <image name="cifra.jpg" width="829" height="973"/>
-        <image name="cifra.jpg" width="829" height="973"/>
         <image name="gifs-animados-musicas-4.gif" width="450" height="300"/>
         <image name="regua.png" width="110" height="1007"/>
         <image name="sustenido.png" width="100" height="100"/>
