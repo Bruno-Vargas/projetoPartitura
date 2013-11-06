@@ -41,6 +41,8 @@
 		F9E80D041823E2E0009BCEC8 /* regua.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E80D031823E2E0009BCEC8 /* regua.png */; };
 		F9E80D061823EAFF009BCEC8 /* bemol.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E80D051823EAFF009BCEC8 /* bemol.png */; };
 		F9E80D081823EB3F009BCEC8 /* sustenido.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E80D071823EB3F009BCEC8 /* sustenido.png */; };
+		F9E80D4E182ABC4C009BCEC8 /* jogoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E80D4D182ABC4C009BCEC8 /* jogoViewController.m */; };
+		F9E80D51182ABE98009BCEC8 /* NotaMusical.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E80D50182ABE98009BCEC8 /* NotaMusical.m */; };
 		F9F7C9CE18200D7F0077F9E6 /* cinco.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9C118200D7F0077F9E6 /* cinco.png */; };
 		F9F7C9D018200D7F0077F9E6 /* dois.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9C318200D7F0077F9E6 /* dois.png */; };
 		F9F7C9D118200D7F0077F9E6 /* doze.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7C9C418200D7F0077F9E6 /* doze.png */; };
@@ -111,6 +113,10 @@
 		F9E80D031823E2E0009BCEC8 /* regua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = regua.png; sourceTree = "<group>"; };
 		F9E80D051823EAFF009BCEC8 /* bemol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bemol.png; sourceTree = "<group>"; };
 		F9E80D071823EB3F009BCEC8 /* sustenido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenido.png; sourceTree = "<group>"; };
+		F9E80D4C182ABC4C009BCEC8 /* jogoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jogoViewController.h; sourceTree = "<group>"; };
+		F9E80D4D182ABC4C009BCEC8 /* jogoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jogoViewController.m; sourceTree = "<group>"; };
+		F9E80D4F182ABE98009BCEC8 /* NotaMusical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotaMusical.h; sourceTree = "<group>"; };
+		F9E80D50182ABE98009BCEC8 /* NotaMusical.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotaMusical.m; sourceTree = "<group>"; };
 		F9F7C9C118200D7F0077F9E6 /* cinco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cinco.png; sourceTree = "<group>"; };
 		F9F7C9C318200D7F0077F9E6 /* dois.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dois.png; sourceTree = "<group>"; };
 		F9F7C9C418200D7F0077F9E6 /* doze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doze.png; sourceTree = "<group>"; };
@@ -163,6 +169,8 @@
 				F98A1B24181EE7180051CF8B /* metronomo.m */,
 				0D83136018211CCF009FCD52 /* PitchDetector.h */,
 				0D83136118211CCF009FCD52 /* PitchDetector.m */,
+				F9E80D4F182ABE98009BCEC8 /* NotaMusical.h */,
+				F9E80D50182ABE98009BCEC8 /* NotaMusical.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -177,6 +185,8 @@
 				F9E80CF0182288D7009BCEC8 /* apontador.h */,
 				F9E80CF1182288D7009BCEC8 /* apontador.m */,
 				0D8313661822D5EB009FCD52 /* bolinha.png */,
+				F9E80D4C182ABC4C009BCEC8 /* jogoViewController.h */,
+				F9E80D4D182ABC4C009BCEC8 /* jogoViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -424,7 +434,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D83136518211EBF009FCD52 /* AfinadorViewController.m in Sources */,
+				F9E80D4E182ABC4C009BCEC8 /* jogoViewController.m in Sources */,
 				DFB930CD1819803E00401180 /* AppDelegate.m in Sources */,
+				F9E80D51182ABE98009BCEC8 /* NotaMusical.m in Sources */,
 				DFB930C91819803E00401180 /* main.m in Sources */,
 				F98A1B25181EE7180051CF8B /* metronomo.m in Sources */,
 				0D83136218211CCF009FCD52 /* PitchDetector.m in Sources */,
