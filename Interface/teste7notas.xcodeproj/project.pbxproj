@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D7407F518240C730014C194 /* minima.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D7407F418240C720014C194 /* minima.png */; };
 		0D831357182116F7009FCD52 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D831356182116F7009FCD52 /* Accelerate.framework */; };
 		0D83135C18211C50009FCD52 /* Afinador.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D83135B18211C50009FCD52 /* Afinador.m */; };
 		0D83135F18211C88009FCD52 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D83135E18211C88009FCD52 /* AudioController.m */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D7407F418240C720014C194 /* minima.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minima.png; sourceTree = "<group>"; };
 		0D831356182116F7009FCD52 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		0D83135A18211C50009FCD52 /* Afinador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Afinador.h; sourceTree = "<group>"; };
 		0D83135B18211C50009FCD52 /* Afinador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Afinador.m; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				DFB930CE1819803E00401180 /* Main.storyboard */,
 				F9E80D071823EB3F009BCEC8 /* sustenido.png */,
 				F9E80D051823EAFF009BCEC8 /* bemol.png */,
+				0D7407F418240C720014C194 /* minima.png */,
 				F9E80D031823E2E0009BCEC8 /* regua.png */,
 				F98A1B1F181EE3580051CF8B /* cifra.jpg */,
 				F98A1B21181EE3600051CF8B /* gifs-animados-musicas-4.gif */,
@@ -381,6 +384,7 @@
 				F9F7C9D218200D7F0077F9E6 /* nove.png in Resources */,
 				F9E80D061823EAFF009BCEC8 /* bemol.png in Resources */,
 				F9F7C9D718200D7F0077F9E6 /* sete.png in Resources */,
+				0D7407F518240C730014C194 /* minima.png in Resources */,
 				F9F7C9D318200D7F0077F9E6 /* oito.png in Resources */,
 				F9F7C9CE18200D7F0077F9E6 /* cinco.png in Resources */,
 				F9E80D021823E0AF009BCEC8 /* dez.png in Resources */,

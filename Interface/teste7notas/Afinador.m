@@ -162,7 +162,6 @@ int aux_indice = 0;
     }
     
     self.diferencaFreqReal = [self.freqReal[aux_indice] doubleValue];
-    NSLog(@"nota -> %f", self.diferencaFreqReal);
     
     return [self.notaMaisAfinada doubleValue];
 }
