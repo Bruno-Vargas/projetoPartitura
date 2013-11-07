@@ -7,10 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AudioController.h"
+#import "PitchDetector.h"
 #import <AVFoundation/AVFoundation.h>
 #import "NotaMusical.h"
 
-@interface jogoViewController : UIViewController
+@interface jogoViewController : UIViewController <PitchDetectorDelegate, AudioControllerDelegate>
+{
+    UILabel *freqLabel;
+    AudioController *audioManager;
+    PitchDetector *autoCorrelator;
+    
+    
+    NSMutableArray *medianPitchFollow;
+}
+
 
 @property (nonatomic, strong) NotaMusical *notaAntiga;
 @property (nonatomic, strong) NotaMusical *notaCorrente;

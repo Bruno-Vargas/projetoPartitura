@@ -89,7 +89,7 @@
     return TRUE;
 }
 
-- (void) rotinaJogo{
+- (void) rotinaJogo{ //ideia cebtral do jogo
     [self atualizaBarra];
 }
 
@@ -100,6 +100,15 @@
 }
 
 - (IBAction)comecarJogo:(id)sender {
+
+    audioManager = [AudioController sharedAudioManager];
+    audioManager.delegate = self;
+    autoCorrelator = [[PitchDetector alloc] initWithSampleRate:audioManager.audioFormat.mSampleRate lowBoundFreq:30 hiBoundFreq:4500 andDelegate:self];
+    
+    medianPitchFollow = [[NSMutableArray alloc] initWithCapacity:22];
+    
+    
+    
     self.progresso = 0.0;
     [self.tempo setProgress:self.progresso animated:TRUE] ;
     self.botaoComecar.enabled = NO;
@@ -109,6 +118,12 @@
 }
 
 - (IBAction)pararJogo:(id)sender {
+    
+    //resetar objetos ao parar
+    audioManager = nil;
+    autoCorrelator = nil;
+    
+    
     self.botaoComecar.enabled = YES;
     self.botaoParar.enabled = NO;
     [self pararTemporizador];
@@ -118,5 +133,55 @@
     [self.temporizador invalidate];
     self.temporizador = nil;
 }
+
+- (void) updatedPitch:(float)frequency {
+    
+    double value = frequency;
+    
+    
+    //Receber frequencia e aumentar precisao..
+    //utilizando um filtro com a media da amplitude
+    NSNumber *nsnum = [NSNumber numberWithDouble:value];
+    [medianPitchFollow insertObject:nsnum atIndex:0];
+    
+    if(medianPitchFollow.count>22) {
+        [medianPitchFollow removeObjectAtIndex:medianPitchFollow.count-1];
+    }
+    double median = 0;
+    
+    
+    
+    if(medianPitchFollow.count>=2) {
+        NSSortDescriptor *highestToLowest = [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:NO];
+        NSMutableArray *tempSort = [NSMutableArray arrayWithArray:medianPitchFollow];
+        [tempSort sortUsingDescriptors:[NSArray arrayWithObject:highestToLowest]];
+        
+        if(tempSort.count%2==0) {
+            double first = 0, second = 0;
+            first = [[tempSort objectAtIndex:tempSort.count/2-1] doubleValue];
+            second = [[tempSort objectAtIndex:tempSort.count/2] doubleValue];
+            median = (first+second)/2;
+            value = median;
+        } else {
+            median = [[tempSort objectAtIndex:tempSort.count/2] doubleValue];
+            value = median;
+        }
+        
+        [tempSort removeAllObjects];
+        tempSort = nil;
+    }
+    
+    //aqui vamos fazer os testes para plotar dados na tela
+    //a freq que esta no mic eh -> value
+    
+    NSLog(@"freq -> %f", value);
+    
+    
+}
+- (void) receivedAudioSamples:(SInt16 *)samples length:(int)len {
+    [autoCorrelator addSamples:samples inNumberFrames:len];
+}
+
+
 
 @end
