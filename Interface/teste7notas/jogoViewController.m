@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self.tempo setProgress:0.0 animated:TRUE] ;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,6 +38,12 @@
 }
 
 - (void) jogar{
+    self.temporizador = [NSTimer scheduledTimerWithTimeInterval: 20.0
+                                     target:self
+                                   selector:@selector(reproduzir)
+                                   userInfo:nil
+                                    repeats:YES];
+
 
 }
 - (void) novoDesafio{
@@ -76,14 +84,21 @@
     }
 
 }
-- (BOOL) verificarNota{
+- (BOOL) verificarNota{ //deve chamar a parte que o rodrigao esta fazendo.
     return TRUE;
 }
 
 - (IBAction)comecarJogo:(id)sender {
+    [self.tempo setProgress:0.0 animated:TRUE] ;
+    self.botaoComecar.enabled = NO;
+    self.botaoParar.enabled = YES;
+    [self novoDesafio]; //inicializa a nota do jogo
+    [self jogar]; //comeca o jogo
 }
 
 - (IBAction)pararJogo:(id)sender {
+    self.botaoComecar.enabled = YES;
+    self.botaoParar.enabled = NO;
 }
 
 

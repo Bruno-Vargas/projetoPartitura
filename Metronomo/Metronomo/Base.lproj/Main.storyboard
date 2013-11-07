@@ -69,6 +69,10 @@
                                 <rect key="frame" x="20" y="137" width="277" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iW2-sS-FdS">
+                                <rect key="frame" x="20" y="235" width="277" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -77,6 +81,7 @@
                         <outlet property="numCompasso" destination="wQQ-2B-24Y" id="le3-6f-LXF"/>
                         <outlet property="numero" destination="dvw-wP-zSp" id="Rro-1g-gmf"/>
                         <outlet property="percurso" destination="wAE-eS-dUI" id="y4T-Zn-nOU"/>
+                        <outlet property="tempo" destination="iW2-sS-FdS" id="SZU-4V-8Xu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

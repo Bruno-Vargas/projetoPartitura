@@ -43,6 +43,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
     self.cad = [self.numCadencia.text integerValue];
     self.com = [self.numCompasso.text integerValue];
+    [self progresso];
+    
     self.rodando = TRUE;
     self.metronomo =[[metronomo alloc] initWithTimer: self.com andCadencia: self.cad andTick:^{
         
@@ -63,6 +65,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
                                  
                                  bolinhaImagem.frame = newFrame;
                                  [self.bolinha atualizarCoordenadas:(20 + self.metronomo.contador*20) and:self.bolinha.coordenadaY];
+                                 //[self progresso];
                              }
                              completion: ^(BOOL anim){
                                  [bolinhaImagem removeFromSuperview];
@@ -74,9 +77,15 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [self.metronomo marcarCompasso];
     
 }
+-(void) progresso{
+    [self.tempo setProgress:1.0 animated:TRUE] ;
+
+}
 
 -(IBAction)parar:(id)parar;{
     [self.metronomo pararCompasso];
+    [self.tempo setProgress:0 animated:false] ;
+
     NSLog(@"estou na parar");
     
 }

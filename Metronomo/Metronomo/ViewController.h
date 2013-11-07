@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *numero;
 @property (weak, nonatomic) IBOutlet UIImageView *percurso;
 
+@property (weak, nonatomic) IBOutlet UIProgressView *tempo;
 
 
 
