@@ -9,7 +9,7 @@
 #import "jogoViewController.h"
 
 @interface jogoViewController ()
-
+@property (nonatomic)float progresso;
 @end
 
 @implementation jogoViewController
@@ -38,9 +38,9 @@
 }
 
 - (void) jogar{
-    self.temporizador = [NSTimer scheduledTimerWithTimeInterval: 20.0
+    self.temporizador = [NSTimer scheduledTimerWithTimeInterval: 0.5
                                      target:self
-                                   selector:@selector(reproduzir)
+                                   selector:@selector(rotinaJogo)
                                    userInfo:nil
                                     repeats:YES];
 
@@ -85,11 +85,23 @@
 
 }
 - (BOOL) verificarNota{ //deve chamar a parte que o rodrigao esta fazendo.
+    
     return TRUE;
 }
 
+- (void) rotinaJogo{
+    [self atualizaBarra];
+}
+
+-(void) atualizaBarra{
+    self.progresso += 0.01;
+    [self.tempo setProgress:self.progresso animated:TRUE] ;
+    
+}
+
 - (IBAction)comecarJogo:(id)sender {
-    [self.tempo setProgress:0.0 animated:TRUE] ;
+    self.progresso = 0.0;
+    [self.tempo setProgress:self.progresso animated:TRUE] ;
     self.botaoComecar.enabled = NO;
     self.botaoParar.enabled = YES;
     [self novoDesafio]; //inicializa a nota do jogo
@@ -99,7 +111,12 @@
 - (IBAction)pararJogo:(id)sender {
     self.botaoComecar.enabled = YES;
     self.botaoParar.enabled = NO;
+    [self pararTemporizador];
 }
 
+- (void)pararTemporizador{
+    [self.temporizador invalidate];
+    self.temporizador = nil;
+}
 
 @end

@@ -35,7 +35,7 @@
     hann = (float*) malloc(sizeof(float)*bufferLength);
     vDSP_hann_window(hann, bufferLength, vDSP_HANN_NORM);
     
-    sampleBuffer = (SInt16*) malloc(512);
+    sampleBuffer = (SInt16*) malloc(1024);
     samplesInSampleBuffer = 0;
     
     result = (float*) malloc(sizeof(float)*bufferLength);
