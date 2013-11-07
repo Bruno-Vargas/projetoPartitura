@@ -10,5 +10,17 @@
 
 @implementation NotaMusical
 
+- (id) initWithValor:(NSString *)nome andFrequencia:(float)frequencia andNumOitava:(int)numOitava{
+    self = [super init];
+    if (self){
+        
+        self.nome = nome;
+        self.frequencia = frequencia;
+        self.numOitava = numOitava;
+    }
+    return self;
+}
+
+
 
 @end

@@ -12,7 +12,8 @@
 
 @interface jogoViewController : UIViewController
 
-@property (nonatomic, strong) NotaMusical *desafio;//contera a nota musical a ser verificada, nota e frequencia
+@property (nonatomic, strong) NotaMusical *notaAntiga;
+@property (nonatomic, strong) NotaMusical *notaCorrente;
 @property (nonatomic, strong) NSTimer *temporizador;
 
 - (void) jogar;

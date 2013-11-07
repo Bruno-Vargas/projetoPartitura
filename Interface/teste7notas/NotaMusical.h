@@ -14,4 +14,6 @@
 @property (nonatomic) float frequencia;
 @property (nonatomic) int numOitava;
 
+- (id) initWithValor: (NSString *) nome andFrequencia:(float) frequencia andNumOitava: (int) numOitava;
+
 @end
