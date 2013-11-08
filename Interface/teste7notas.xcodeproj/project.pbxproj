@@ -29,6 +29,7 @@
 		DFB930E81819803E00401180 /* teste7notasTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB930E71819803E00401180 /* teste7notasTests.m */; };
 		DFCE058B181EC6CB0085B616 /* MetronomoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCE058A181EC6CB0085B616 /* MetronomoViewController.m */; };
 		DFD94B4F182BCF7000A911DB /* red-24819_640.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD94B4E182BCF7000A911DB /* red-24819_640.png */; };
+		DFD94B51182D09CE00A911DB /* piso-3d-preto-black-1358783505.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DFD94B50182D09CE00A911DB /* piso-3d-preto-black-1358783505.jpg */; };
 		F96782AD181FC8AD00D35CB4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96782AC181FC8AD00D35CB4 /* AudioToolbox.framework */; };
 		F96782B2181FCCE400D35CB4 /* tec.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F96782AF181FCCE400D35CB4 /* tec.mp3 */; };
 		F96782B3181FCCE400D35CB4 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F96782B0181FCCE400D35CB4 /* tick.mp3 */; };
@@ -100,6 +101,7 @@
 		DFCE0589181EC6CB0085B616 /* MetronomoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MetronomoViewController.h; path = ../MetronomoViewController.h; sourceTree = "<group>"; };
 		DFCE058A181EC6CB0085B616 /* MetronomoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MetronomoViewController.m; path = ../MetronomoViewController.m; sourceTree = "<group>"; };
 		DFD94B4E182BCF7000A911DB /* red-24819_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-24819_640.png"; sourceTree = "<group>"; };
+		DFD94B50182D09CE00A911DB /* piso-3d-preto-black-1358783505.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "piso-3d-preto-black-1358783505.jpg"; sourceTree = "<group>"; };
 		F96782AC181FC8AD00D35CB4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F96782AF181FCCE400D35CB4 /* tec.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tec.mp3; sourceTree = "<group>"; };
 		F96782B0181FCCE400D35CB4 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				0D7407F418240C720014C194 /* minima.png */,
 				F9E80D031823E2E0009BCEC8 /* regua.png */,
 				F98A1B1F181EE3580051CF8B /* cifra.jpg */,
+				DFD94B50182D09CE00A911DB /* piso-3d-preto-black-1358783505.jpg */,
 				F98A1B21181EE3600051CF8B /* gifs-animados-musicas-4.gif */,
 			);
 			name = view;
@@ -403,6 +406,7 @@
 				F9E80D021823E0AF009BCEC8 /* dez.png in Resources */,
 				F96782B3181FCCE400D35CB4 /* tick.mp3 in Resources */,
 				F9E80D081823EB3F009BCEC8 /* sustenido.png in Resources */,
+				DFD94B51182D09CE00A911DB /* piso-3d-preto-black-1358783505.jpg in Resources */,
 				DFB930D51819803E00401180 /* Images.xcassets in Resources */,
 				F96782B4181FCCE400D35CB4 /* toc.mp3 in Resources */,
 				F9F7C9DA18200D7F0077F9E6 /* zero.png in Resources */,
