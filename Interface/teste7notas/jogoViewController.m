@@ -90,9 +90,9 @@
 - (void) rotinaJogo{ //ideia central do jogo
     [self atualizaBarra];
     NSLog(@"progresso %f",self.progresso);
-    //if (self.progresso == 1.0) {
-      //  [self acaoErrar];
-   // }
+    if (self.progresso == 1.0) {
+        [self acaoErrar];
+    }
     //como pegamos muitos ruídos do ambiente, não posso colocar que ele errou caso a entrada seja errada, por isso ele erra se nao acertar a nota.
     if ([self.afinador.notaAtual isEqualToString: self.notaCorrente.nome]){
         [self acaoAcertar];
