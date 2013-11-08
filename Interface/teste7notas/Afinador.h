@@ -27,18 +27,13 @@
 @property (nonatomic) double maiorFrequencia;
 
 @property (nonatomic, strong) NSString *notaMaisAfinada;
-
 @property (nonatomic, strong) NSString *notaAnterior;
-
 @property (nonatomic, strong) NSString *notaAtual;
-
 @property (nonatomic, strong) NSString *notaProxima;
 
 
 @property (nonatomic, strong) NSMutableArray *moduloMatrizAfinada;
-
 @property (nonatomic) double numOitava;
-
 @property (nonatomic, strong) NSMutableArray *matrizAfinada;
 
 -(void) carregaNotasFrequencias;

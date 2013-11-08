@@ -29,12 +29,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *botaoParar;
 @property (weak, nonatomic) IBOutlet UIButton *botaoComecar;
 @property (weak, nonatomic) IBOutlet UILabel *notaDesafio;
-@property (weak, nonatomic) IBOutlet UILabel *notaTocada;
 @property (weak, nonatomic) IBOutlet UIProgressView *tempo;
+@property (weak, nonatomic) IBOutlet UILabel *notaTocada;
 
 - (void) jogar;
 - (void) novoDesafio;//cria uma nova nota musical para ser utilizada no desafio. Esata nota eh verificada para que nao seja igual a anterior!
-- (BOOL) verificarNota;
 - (IBAction)comecarJogo:(id)sender;
 - (IBAction)pararJogo:(id)sender;
 

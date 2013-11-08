@@ -7,9 +7,11 @@
 //
 
 #import "jogoViewController.h"
-
+#import "Afinador.h"
 @interface jogoViewController ()
-@property (nonatomic)float progresso;
+@property (nonatomic) float progresso;
+@property (nonatomic) NSString* frequenciaLida;
+@property (nonatomic) Afinador* afinador;
 @end
 
 @implementation jogoViewController
@@ -50,75 +52,95 @@
     int auxiliar = arc4random() % 7;
     switch (auxiliar) {
         case 0 : //do
-            if (![self.notaAntiga.nome isEqualToString:@"do"])
-                self.notaCorrente = [[NotaMusical alloc] initWithValor:@"do" andFrequencia:32.700 andNumOitava:1];
+            if (![self.notaAntiga.nome isEqualToString:@"Dó"])
+                self.notaCorrente = [[NotaMusical alloc] initWithValor:@"Dó" andFrequencia:32.700 andNumOitava:1];
                 break;
         case 1: //re
-            if (![self.notaAntiga.nome isEqualToString:@"re"])
-                self.notaCorrente = [[NotaMusical alloc] initWithValor:@"re" andFrequencia:36.6875 andNumOitava:1];
+            if (![self.notaAntiga.nome isEqualToString:@"Ré"])
+                self.notaCorrente = [[NotaMusical alloc] initWithValor:@"Ré" andFrequencia:36.6875 andNumOitava:1];
             
             break;
         case 2: //mi
-            if (![self.notaAntiga.nome isEqualToString:@"mi"])
-                self.notaCorrente = [[NotaMusical alloc] initWithValor:@"mi" andFrequencia:41.200 andNumOitava:1];
+            if (![self.notaAntiga.nome isEqualToString:@"Mi"])
+                self.notaCorrente = [[NotaMusical alloc] initWithValor:@"Mi" andFrequencia:41.200 andNumOitava:1];
             
             break;
         case 3: //fa
-            if (![self.notaAntiga.nome isEqualToString:@"fa"])
-                self.notaCorrente = [[NotaMusical alloc] initWithValor:@"fa" andFrequencia:43.65 andNumOitava:1];
+            if (![self.notaAntiga.nome isEqualToString:@"Fá"])
+                self.notaCorrente = [[NotaMusical alloc] initWithValor:@"Fá" andFrequencia:43.65 andNumOitava:1];
             
             break;
         case 4: //sol
-            if (![self.notaAntiga.nome isEqualToString:@"sol"])
-                self.notaCorrente = [[NotaMusical alloc] initWithValor:@"sol" andFrequencia:49.00 andNumOitava:1];
+            if (![self.notaAntiga.nome isEqualToString:@"Sol"])
+                self.notaCorrente = [[NotaMusical alloc] initWithValor:@"Sol" andFrequencia:49.00 andNumOitava:1];
             break;
         case 5: //la
-            if (![self.notaAntiga.nome isEqualToString:@"la"])
-                self.notaCorrente = [[NotaMusical alloc] initWithValor:@"la" andFrequencia:55.00 andNumOitava:1];
+            if (![self.notaAntiga.nome isEqualToString:@"Lá"])
+                self.notaCorrente = [[NotaMusical alloc] initWithValor:@"Lá" andFrequencia:55.00 andNumOitava:1];
             
             break;
         case 6: //si
-            if (![self.notaAntiga.nome isEqualToString:@"si"])
-                self.notaCorrente = [[NotaMusical alloc] initWithValor:@"si" andFrequencia:61.725 andNumOitava:1];
+            if (![self.notaAntiga.nome isEqualToString:@"Si"])
+                self.notaCorrente = [[NotaMusical alloc] initWithValor:@"Si" andFrequencia:61.725 andNumOitava:1];
             break;
     }
 
 }
-- (BOOL) verificarNota{ //deve chamar a parte que o rodrigao esta fazendo.
-    
-    return TRUE;
+
+- (void) rotinaJogo{ //ideia central do jogo
+    [self atualizaBarra];
+    NSLog(@"progresso %f",self.progresso);
+    //if (self.progresso == 1.0) {
+      //  [self acaoErrar];
+   // }
+    //como pegamos muitos ruídos do ambiente, não posso colocar que ele errou caso a entrada seja errada, por isso ele erra se nao acertar a nota.
+    if ([self.afinador.notaAtual isEqualToString: self.notaCorrente.nome]){
+        [self acaoAcertar];
+    }
+}
+- (void) acaoAcertar {
+    self.notaDesafio.textColor = [UIColor greenColor];
+    [self acaoPararJogo];
+
 }
 
-- (void) rotinaJogo{ //ideia cebtral do jogo
-    [self atualizaBarra];
+-(void) acaoErrar {
+    self.notaDesafio.textColor = [UIColor redColor];
+    [self acaoPararJogo];
+
+
 }
 
 -(void) atualizaBarra{
-    self.progresso += 0.01;
+    self.progresso += 0.2;
     [self.tempo setProgress:self.progresso animated:TRUE] ;
     
 }
 
 - (IBAction)comecarJogo:(id)sender {
-
-    audioManager = [AudioController sharedAudioManager];
-    audioManager.delegate = self;
-    autoCorrelator = [[PitchDetector alloc] initWithSampleRate:audioManager.audioFormat.mSampleRate lowBoundFreq:30 hiBoundFreq:4500 andDelegate:self];
-    
-    medianPitchFollow = [[NSMutableArray alloc] initWithCapacity:22];
-    
-    
-    
-    self.progresso = 0.0;
-    [self.tempo setProgress:self.progresso animated:TRUE] ;
-    self.botaoComecar.enabled = NO;
-    self.botaoParar.enabled = YES;
-    [self novoDesafio]; //inicializa a nota do jogo
-    [self jogar]; //comeca o jogo
+    [self acaoComecarJogo];
 }
 
+- (void) acaoComecarJogo{
+    self.botaoComecar.enabled = NO;
+    self.botaoParar.enabled = YES;
+    self.notaDesafio.textColor = [UIColor blackColor];
+    
+    self.progresso = 0.0;
+    self.afinador = [[Afinador alloc]init];
+    
+    [self audioManagerIniciate];
+    [self.tempo setProgress:self.progresso animated:TRUE] ;
+    [self novoDesafio]; //inicializa a nota do jogo
+    [self atualizaTela];
+    [self jogar]; //comeca o jogo
+}
 - (IBAction)pararJogo:(id)sender {
     
+    [self acaoPararJogo];
+}
+
+- (void) acaoPararJogo{
     //resetar objetos ao parar
     audioManager = nil;
     autoCorrelator = nil;
@@ -173,13 +195,33 @@
     
     //aqui vamos fazer os testes para plotar dados na tela
     //a freq que esta no mic eh -> value
-    
+    self.frequenciaLida = [NSString stringWithFormat:@"%4.3f Hz", value];
     NSLog(@"freq -> %f", value);
     
+    //chamo a verificacão da nota musical tocada;
+    [self.afinador calculaAfinacao:self.frequenciaLida];
+    
+    [self atualizaTela];
+    
+    
+}
+
+- (void) audioManagerIniciate{
+    audioManager = [AudioController sharedAudioManager];
+    audioManager.delegate = self;
+    autoCorrelator = [[PitchDetector alloc] initWithSampleRate:audioManager.audioFormat.mSampleRate lowBoundFreq:30 hiBoundFreq:4500 andDelegate:self];
+    
+    medianPitchFollow = [[NSMutableArray alloc] initWithCapacity:22];
     
 }
 - (void) receivedAudioSamples:(SInt16 *)samples length:(int)len {
     [autoCorrelator addSamples:samples inNumberFrames:len];
+}
+
+- (void) atualizaTela{
+    self.notaDesafio.text = self.notaCorrente.nome;
+    self.notaTocada.text = self.afinador.notaAtual;
+   // [self rotinaJogo];
 }
 
 

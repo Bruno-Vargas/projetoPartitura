@@ -38,7 +38,7 @@
     //Obs: deve-se inserir notas e frequencia em ordem crescence a partir do DO
     
     //inserir notas musicais no indice 0(zero) da matriz
-    [self.notasMusicais addObject:[NSMutableArray arrayWithObjects:@"DO", @"DO#", @"RE", @"RE#", @"MI", @"FA", @"FA#", @"SOL", @"SOL#", @"LA", @"LA#", @"SI", nil]];
+    [self.notasMusicais addObject:[NSMutableArray arrayWithObjects:@"Dó", @"Dó#", @"Ré", @"Ré#", @"Mi", @"Fá", @"Fá#", @"Sol", @"Sol#", @"Lá", @"Lá#", @"Si", nil]];
     
     
     //inserir frequencias no indice 1 da matriz
