@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Zr7-mD-cqe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Zr7-mD-cqe">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -528,7 +528,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nota Musical:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ums-IV-NRe">
-                                <rect key="frame" x="20" y="159" width="106" height="21"/>
+                                <rect key="frame" x="139" y="154" width="106" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -562,13 +562,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nota" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOD-eU-L3V">
-                                <rect key="frame" x="239" y="249" width="37" height="21"/>
+                                <rect key="frame" x="271" y="249" width="37" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43s-AK-OGH">
-                                <rect key="frame" x="83" y="188" width="132" height="82"/>
+                                <rect key="frame" x="131" y="188" width="132" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -593,6 +593,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eeZ-ER-imB">
+                                <rect key="frame" x="23" y="154" width="50" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -602,6 +607,7 @@
                         <outlet property="notaDesafio" destination="43s-AK-OGH" id="jeD-UV-lsG"/>
                         <outlet property="notaTocada" destination="TOD-eU-L3V" id="ual-Gf-qrt"/>
                         <outlet property="tempo" destination="YFA-EH-Bc1" id="S34-Tt-eWH"/>
+                        <outlet property="vCairNotas" destination="eeZ-ER-imB" id="8E4-yb-2dg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdq-ro-Yl3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -612,18 +618,8 @@
     <resources>
         <image name="bemol.png" width="100" height="100"/>
         <image name="cifra.jpg" width="829" height="973"/>
-        <image name="cifra.jpg" width="829" height="973"/>
-        <image name="cifra.jpg" width="829" height="973"/>
-        <image name="cifra.jpg" width="829" height="973"/>
         <image name="minima.png" width="1000" height="1000"/>
         <image name="piso-3d-preto-black-1358783505.jpg" width="1024" height="768"/>
-        <image name="piso-3d-preto-black-1358783505.jpg" width="1024" height="768"/>
-        <image name="piso-3d-preto-black-1358783505.jpg" width="1024" height="768"/>
-        <image name="piso-3d-preto-black-1358783505.jpg" width="1024" height="768"/>
-        <image name="piso-3d-preto-black-1358783505.jpg" width="1024" height="768"/>
-        <image name="red-24819_640.png" width="640" height="320"/>
-        <image name="red-24819_640.png" width="640" height="320"/>
-        <image name="red-24819_640.png" width="640" height="320"/>
         <image name="red-24819_640.png" width="640" height="320"/>
         <image name="regua.png" width="110" height="1007"/>
         <image name="sustenido.png" width="100" height="100"/>

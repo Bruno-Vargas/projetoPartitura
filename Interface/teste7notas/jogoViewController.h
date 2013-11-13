@@ -22,7 +22,11 @@
     NSMutableArray *medianPitchFollow;
 }
 
-
+@property (nonatomic) int contadorCiclosAnimacao;
+@property (nonatomic) int qtdeTempoAnimacao;
+@property (nonatomic) double tempoIncremeta;
+@property (strong, nonatomic) IBOutlet UIView *vCairNotas;
+@property (nonatomic, strong) UILabel *notaCair;
 @property (nonatomic, strong) NotaMusical *notaAntiga;
 @property (nonatomic, strong) NotaMusical *notaCorrente;
 @property (nonatomic, strong) NSTimer *temporizador;

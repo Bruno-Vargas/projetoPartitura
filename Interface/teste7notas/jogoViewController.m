@@ -29,8 +29,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self.tempo setProgress:0.0 animated:TRUE] ;
-
+    [self.tempo setProgress:0.0 animated:TRUE];
+    
+    //criar Label da nota que ira cair em animacao na tela
+    self.notaCair = [[UILabel alloc] init];
+    
+    //determina a qtde de tempo que ira durar uma nota na tela
+    //quanto maior o valor..mais dificil sera o game
+    //tempo maximo é de 1.0
+    self.tempoIncremeta = 0.2;
+    
+    //sabendo que o tempo total é de 1.0...
+    //pega-se esse tempo e divide pelo tempoIncrementa para determinar a qtde de ciclos
+    self.qtdeTempoAnimacao = 1/self.tempoIncremeta;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -88,6 +100,13 @@
 }
 
 - (void) rotinaJogo{ //ideia central do jogo
+   
+//    UILabel *notaCaindo = [[UILabel alloc] init];
+//    notaCaindo.text = @"rodrigo";
+//    
+//    [self.vCairNotas addSubview: ];
+//    
+ 
     [self atualizaBarra];
     NSLog(@"progresso %f",self.progresso);
     if (self.progresso == 1.0) {
@@ -104,6 +123,48 @@
 
 }
 
+-(void) acaoCairNota{
+    
+
+    //limpar sub view
+//    for (UIView *subview in [self.vCairNotas subviews]) {
+//        [subview removeFromSuperview];
+//    }
+    
+//    self.notaCair = [[UILabel alloc] initWithFrame:CGRectMake(0, self.progresso, 250, 15)];
+    
+    //caputar o comprimento da subView vCairNotas
+    double tamSubView = [self vCairNotas].bounds.size.height;
+    
+    //pega o tamanho de cada frame de animacao..
+    double frameAnimacao = tamSubView/self.qtdeTempoAnimacao;
+    
+    
+    self.notaCair.frame = CGRectMake(0, frameAnimacao * self.contadorCiclosAnimacao, 50, 15);
+
+    
+    //seta ponto de origem e termino de onde a nota é redesenhada com a animacao
+    CGRect newFrame = CGRectMake(0, frameAnimacao * (self.contadorCiclosAnimacao + 1), 50, 15);
+    
+    [self.notaCair setText:self.notaCorrente.nome];
+    
+    [self.vCairNotas addSubview:self.notaCair];
+    
+    //cria animacao de insercao da nota do ponto inicial ao ponto final
+    [UIView animateWithDuration:0.4
+                          delay:0
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         self.notaCair.frame = newFrame;
+                     }
+                     completion: nil];
+    
+    self.contadorCiclosAnimacao++;
+    
+    
+}
+
+
 -(void) acaoErrar {
     self.notaDesafio.textColor = [UIColor redColor];
     [self acaoPararJogo];
@@ -112,7 +173,10 @@
 }
 
 -(void) atualizaBarra{
-    self.progresso += 0.2;
+    
+    //pode-se definir o grau de dificuldade do game aumentando o valor a se incrementar no self.progresso
+    self.progresso += self.tempoIncremeta;
+        [self acaoCairNota];
     [self.tempo setProgress:self.progresso animated:TRUE] ;
     
 }
@@ -128,6 +192,8 @@
     
     self.progresso = 0.0;
     self.afinador = [[Afinador alloc]init];
+    
+    self.contadorCiclosAnimacao = 0;
     
     [self audioManagerIniciate];
     [self.tempo setProgress:self.progresso animated:TRUE] ;
@@ -196,7 +262,9 @@
     //aqui vamos fazer os testes para plotar dados na tela
     //a freq que esta no mic eh -> value
     self.frequenciaLida = [NSString stringWithFormat:@"%4.3f Hz", value];
-    NSLog(@"freq -> %f", value);
+
+    
+    //    NSLog(@"freq -> %f", value);
     
     //chamo a verificacão da nota musical tocada;
     [self.afinador calculaAfinacao:self.frequenciaLida];
@@ -221,6 +289,8 @@
 - (void) atualizaTela{
     self.notaDesafio.text = self.notaCorrente.nome;
     self.notaTocada.text = self.afinador.notaAtual;
+    
+
    // [self rotinaJogo];
 }
 
