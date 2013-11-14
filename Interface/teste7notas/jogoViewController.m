@@ -42,7 +42,13 @@
     //sabendo que o tempo total é de 1.0...
     //pega-se esse tempo e divide pelo tempoIncrementa para determinar a qtde de ciclos
     //a ser utilizado na pontuacao
-   self.qtdeCiclosAnimacao = 1/self.tempoIncremeta;
+    self.qtdeCiclosAnimacao = 1/self.tempoIncremeta;
+    
+    //zerar qtde de rodadas para iniciar novo ciclo para o jogador..
+    self.qtdeRodadas = 0;
+
+    //jogador comeca sem erros.. se errar perdera a rodada
+    self.errouNota = FALSE;
     
 }
 
@@ -102,10 +108,9 @@
 
 - (void) rotinaJogo{ //ideia central do jogo
    
- 
     [self atualizaBarra];
     NSLog(@"progresso %f",self.progresso);
-    if (self.progresso == 1.0) {
+    if (self.progresso > 1.0) {
         [self acaoErrar];
     }
     //como pegamos muitos ruídos do ambiente, não posso colocar que ele errou caso a entrada seja errada, por isso ele erra se nao acertar a nota.
@@ -113,19 +118,43 @@
         [self acaoAcertar];
     }
 }
+
 - (void) acaoAcertar {
     [self acaoPararJogo];
+    
+    //limpar notas caindo da tela
+    for (UIView *subview in [self.vCairNotas subviews]) {
+        [subview removeFromSuperview];
+    }
+    
+    //jogador acertou a nota e ganhou uma rodada
+    self.qtdeRodadas++;
+    
+    
+    if(self.qtdeRodadas < 1){
+        
+        //iniciar nova rodada
+        [self acaoComecarJogo];
+        
+    }else{
+        //passou por todas as rodas..e ganhou o jogo.. mostrar tela de parabens
+        self.vGanhouRodada.hidden = NO;
+        self.vPerdeuRodada.hidden = YES;
+        self.vCairNotas.hidden = YES;
+        
+    }
+    
 }
 
 -(void) acaoCairNota{
     
-
+    self.vCairNotas.hidden = NO;
+    
     //caputar o comprimento da subView vCairNotas
     double heightSubView = [self vCairNotas].bounds.size.height;
     
     int posicaoX =  arc4random() % (int)([self vCairNotas].bounds.size.width);
 
-    
     //ponto inicial da animacao
     self.notaCair.frame = CGRectMake(posicaoX, 0, 50, 15);
 
@@ -169,7 +198,6 @@
 
 - (IBAction)comecarJogo:(id)sender {
     [self acaoComecarJogo];
-                [self acaoCairNota];
 }
 
 
@@ -182,6 +210,12 @@
 }
 
 - (void) acaoComecarJogo{
+   
+    //esconder view de alerta para usuario
+    self.vPerdeuRodada.hidden = YES;
+    self.vGanhouRodada.hidden = YES;
+    self.vPerdeuRodada.hidden = YES;
+    
     self.botaoComecar.enabled = NO;
     self.botaoParar.enabled = YES;
     
@@ -190,11 +224,15 @@
 
     self.contadorCiclosAnimacao = 0;
     
+    
+    
     [self audioManagerIniciate];
     [self.tempo setProgress:self.progresso animated:TRUE] ;
     [self novoDesafio]; //inicializa a nota do jogo
     [self atualizaTela];
     [self jogar]; //comeca o jogo
+    
+    [self acaoCairNota];
 }
 - (IBAction)pararJogo:(id)sender {
     
@@ -210,7 +248,27 @@
     self.botaoComecar.enabled = YES;
     self.botaoParar.enabled = NO;
     [self pararTemporizador];
+    
+ 
+    //exibir view com alerta que o usuario perdeu
+    self.vPerdeuRodada.hidden = NO;
+    self.vGanhouRodada.hidden = YES;
+    self.vCairNotas.hidden = YES;
+    
+    
+    //limpar notas caindo da tela
+    for (UIView *subview in [self.vCairNotas subviews]) {
+        [subview removeFromSuperview];
+    }
+
+    //limpar nota lida no momento
+    self.notaTocada.text = @"";
+    
+    
 }
+
+
+
 
 - (void)pararTemporizador{
     [self.temporizador invalidate];
@@ -257,9 +315,6 @@
     //aqui vamos fazer os testes para plotar dados na tela
     //a freq que esta no mic eh -> value
     self.frequenciaLida = [NSString stringWithFormat:@"%4.3f Hz", value];
-
-    
-    //    NSLog(@"freq -> %f", value);
     
     //chamo a verificacão da nota musical tocada;
     [self.afinador calculaAfinacao:self.frequenciaLida];

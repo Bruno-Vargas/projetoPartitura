@@ -21,13 +21,18 @@
     
     NSMutableArray *medianPitchFollow;
 }
+@property (strong, nonatomic) IBOutlet UIView *vPerdeuRodada;
+@property (strong, nonatomic) IBOutlet UIView *vGanhouRodada;
+@property (strong, nonatomic) IBOutlet UIView *vCairNotas;
 
+
+@property (nonatomic) BOOL errouNota;
 @property (nonatomic) double tempoAnimacao;
-
+@property (nonatomic) int qtdeRodadas;
 @property (nonatomic) int contadorCiclosAnimacao;
 @property (nonatomic) int qtdeCiclosAnimacao;
 @property (nonatomic) double tempoIncremeta;
-@property (strong, nonatomic) IBOutlet UIView *vCairNotas;
+
 @property (nonatomic, strong) UILabel *notaCair;
 @property (nonatomic, strong) NotaMusical *notaAntiga;
 @property (nonatomic, strong) NotaMusical *notaCorrente;

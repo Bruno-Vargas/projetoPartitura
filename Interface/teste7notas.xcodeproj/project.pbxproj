@@ -14,6 +14,8 @@
 		0D83136218211CCF009FCD52 /* PitchDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D83136118211CCF009FCD52 /* PitchDetector.m */; };
 		0D83136518211EBF009FCD52 /* AfinadorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D83136418211EBF009FCD52 /* AfinadorViewController.m */; };
 		0D8313671822D5EB009FCD52 /* bolinha.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8313661822D5EB009FCD52 /* bolinha.png */; };
+		0DDEC198183544EA00583E34 /* joinhaNegativo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DDEC197183544EA00583E34 /* joinhaNegativo.png */; };
+		0DDEC19A18354AEA00583E34 /* joinhaPositivo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DDEC19918354AEA00583E34 /* joinhaPositivo.png */; };
 		DFB930BD1819803E00401180 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB930BC1819803E00401180 /* Foundation.framework */; };
 		DFB930BF1819803E00401180 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB930BE1819803E00401180 /* CoreGraphics.framework */; };
 		DFB930C11819803E00401180 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB930C01819803E00401180 /* UIKit.framework */; };
@@ -35,7 +37,6 @@
 		F96782B3181FCCE400D35CB4 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F96782B0181FCCE400D35CB4 /* tick.mp3 */; };
 		F96782B4181FCCE400D35CB4 /* toc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F96782B1181FCCE400D35CB4 /* toc.mp3 */; };
 		F98A1B20181EE3580051CF8B /* cifra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B1F181EE3580051CF8B /* cifra.jpg */; };
-		F98A1B22181EE3600051CF8B /* gifs-animados-musicas-4.gif in Resources */ = {isa = PBXBuildFile; fileRef = F98A1B21181EE3600051CF8B /* gifs-animados-musicas-4.gif */; };
 		F98A1B25181EE7180051CF8B /* metronomo.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A1B24181EE7180051CF8B /* metronomo.m */; };
 		F9E80CF2182288D7009BCEC8 /* apontador.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E80CF1182288D7009BCEC8 /* apontador.m */; };
 		F9E80CF818228C0C009BCEC8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E80CF718228C0C009BCEC8 /* QuartzCore.framework */; };
@@ -81,6 +82,8 @@
 		0D83136318211EBF009FCD52 /* AfinadorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfinadorViewController.h; sourceTree = "<group>"; };
 		0D83136418211EBF009FCD52 /* AfinadorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfinadorViewController.m; sourceTree = "<group>"; };
 		0D8313661822D5EB009FCD52 /* bolinha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bolinha.png; sourceTree = "<group>"; };
+		0DDEC197183544EA00583E34 /* joinhaNegativo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joinhaNegativo.png; sourceTree = "<group>"; };
+		0DDEC19918354AEA00583E34 /* joinhaPositivo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joinhaPositivo.png; sourceTree = "<group>"; };
 		DFB930B91819803E00401180 /* teste7notas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teste7notas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB930BC1819803E00401180 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DFB930BE1819803E00401180 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -107,7 +110,6 @@
 		F96782B0181FCCE400D35CB4 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		F96782B1181FCCE400D35CB4 /* toc.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = toc.mp3; sourceTree = "<group>"; };
 		F98A1B1F181EE3580051CF8B /* cifra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cifra.jpg; sourceTree = "<group>"; };
-		F98A1B21181EE3600051CF8B /* gifs-animados-musicas-4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "gifs-animados-musicas-4.gif"; sourceTree = "<group>"; };
 		F98A1B23181EE7180051CF8B /* metronomo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metronomo.h; sourceTree = "<group>"; };
 		F98A1B24181EE7180051CF8B /* metronomo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = metronomo.m; sourceTree = "<group>"; };
 		F9E80CF0182288D7009BCEC8 /* apontador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apontador.h; sourceTree = "<group>"; };
@@ -277,14 +279,15 @@
 			isa = PBXGroup;
 			children = (
 				DFD94B4E182BCF7000A911DB /* red-24819_640.png */,
+				0DDEC19918354AEA00583E34 /* joinhaPositivo.png */,
 				DFB930CE1819803E00401180 /* Main.storyboard */,
 				F9E80D071823EB3F009BCEC8 /* sustenido.png */,
+				0DDEC197183544EA00583E34 /* joinhaNegativo.png */,
 				F9E80D051823EAFF009BCEC8 /* bemol.png */,
 				0D7407F418240C720014C194 /* minima.png */,
 				F9E80D031823E2E0009BCEC8 /* regua.png */,
 				F98A1B1F181EE3580051CF8B /* cifra.jpg */,
 				DFD94B50182D09CE00A911DB /* piso-3d-preto-black-1358783505.jpg */,
-				F98A1B21181EE3600051CF8B /* gifs-animados-musicas-4.gif */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				0D8313671822D5EB009FCD52 /* bolinha.png in Resources */,
 				F9F7C9D218200D7F0077F9E6 /* nove.png in Resources */,
 				F9E80D061823EAFF009BCEC8 /* bemol.png in Resources */,
+				0DDEC19A18354AEA00583E34 /* joinhaPositivo.png in Resources */,
 				F9F7C9D718200D7F0077F9E6 /* sete.png in Resources */,
 				0D7407F518240C730014C194 /* minima.png in Resources */,
 				F9F7C9D318200D7F0077F9E6 /* oito.png in Resources */,
@@ -409,6 +413,7 @@
 				DFD94B51182D09CE00A911DB /* piso-3d-preto-black-1358783505.jpg in Resources */,
 				DFB930D51819803E00401180 /* Images.xcassets in Resources */,
 				F96782B4181FCCE400D35CB4 /* toc.mp3 in Resources */,
+				0DDEC198183544EA00583E34 /* joinhaNegativo.png in Resources */,
 				F9F7C9DA18200D7F0077F9E6 /* zero.png in Resources */,
 				F9F7C9D118200D7F0077F9E6 /* doze.png in Resources */,
 				F98A1B20181EE3580051CF8B /* cifra.jpg in Resources */,
@@ -418,7 +423,6 @@
 				F9E80D041823E2E0009BCEC8 /* regua.png in Resources */,
 				F9F7C9D818200D7F0077F9E6 /* tres.png in Resources */,
 				F9F7C9D618200D7F0077F9E6 /* seis.png in Resources */,
-				F98A1B22181EE3600051CF8B /* gifs-animados-musicas-4.gif in Resources */,
 				F9F7C9D918200D7F0077F9E6 /* um.png in Resources */,
 				F9F7C9D418200D7F0077F9E6 /* onze.png in Resources */,
 				DFB930C71819803E00401180 /* InfoPlist.strings in Resources */,
