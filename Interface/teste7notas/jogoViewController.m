@@ -41,7 +41,8 @@
     
     //sabendo que o tempo total é de 1.0...
     //pega-se esse tempo e divide pelo tempoIncrementa para determinar a qtde de ciclos
-    self.qtdeTempoAnimacao = 1/self.tempoIncremeta;
+    //a ser utilizado na pontuacao
+   self.qtdeCiclosAnimacao = 1/self.tempoIncremeta;
     
 }
 
@@ -101,11 +102,6 @@
 
 - (void) rotinaJogo{ //ideia central do jogo
    
-//    UILabel *notaCaindo = [[UILabel alloc] init];
-//    notaCaindo.text = @"rodrigo";
-//    
-//    [self.vCairNotas addSubview: ];
-//    
  
     [self atualizaBarra];
     NSLog(@"progresso %f",self.progresso);
@@ -118,44 +114,37 @@
     }
 }
 - (void) acaoAcertar {
-    self.notaDesafio.textColor = [UIColor greenColor];
     [self acaoPararJogo];
-
 }
 
 -(void) acaoCairNota{
     
 
-    //limpar sub view
-//    for (UIView *subview in [self.vCairNotas subviews]) {
-//        [subview removeFromSuperview];
-//    }
-    
-//    self.notaCair = [[UILabel alloc] initWithFrame:CGRectMake(0, self.progresso, 250, 15)];
-    
     //caputar o comprimento da subView vCairNotas
-    double tamSubView = [self vCairNotas].bounds.size.height;
+    double heightSubView = [self vCairNotas].bounds.size.height;
     
-    //pega o tamanho de cada frame de animacao..
-    double frameAnimacao = tamSubView/self.qtdeTempoAnimacao;
+    int posicaoX =  arc4random() % (int)([self vCairNotas].bounds.size.width);
+
     
-    
-    self.notaCair.frame = CGRectMake(0, frameAnimacao * self.contadorCiclosAnimacao, 50, 15);
+    //ponto inicial da animacao
+    self.notaCair.frame = CGRectMake(posicaoX, 0, 50, 15);
 
     
     //seta ponto de origem e termino de onde a nota é redesenhada com a animacao
-    CGRect newFrame = CGRectMake(0, frameAnimacao * (self.contadorCiclosAnimacao + 1), 50, 15);
+    CGRect frameFinalAnimacao = CGRectMake(posicaoX, heightSubView, 50, 15);
     
     [self.notaCair setText:self.notaCorrente.nome];
-    
     [self.vCairNotas addSubview:self.notaCair];
     
+    
+    [self calcularTempoAnimacao];
+    
     //cria animacao de insercao da nota do ponto inicial ao ponto final
-    [UIView animateWithDuration:0.4
+    [UIView animateWithDuration:self.tempoAnimacao
                           delay:0
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
-                         self.notaCair.frame = newFrame;
+                         self.notaCair.frame = frameFinalAnimacao;
                      }
                      completion: nil];
     
@@ -166,33 +155,39 @@
 
 
 -(void) acaoErrar {
-    self.notaDesafio.textColor = [UIColor redColor];
     [self acaoPararJogo];
-
-
 }
 
 -(void) atualizaBarra{
     
     //pode-se definir o grau de dificuldade do game aumentando o valor a se incrementar no self.progresso
     self.progresso += self.tempoIncremeta;
-        [self acaoCairNota];
+
     [self.tempo setProgress:self.progresso animated:TRUE] ;
     
 }
 
 - (IBAction)comecarJogo:(id)sender {
     [self acaoComecarJogo];
+                [self acaoCairNota];
+}
+
+
+- (void) calcularTempoAnimacao{
+    
+    //Bruno aqui deve ser feito o calculo para saber quanto tempo durara a animacao
+    //em segundos
+    self.tempoAnimacao = 3;
+    
 }
 
 - (void) acaoComecarJogo{
     self.botaoComecar.enabled = NO;
     self.botaoParar.enabled = YES;
-    self.notaDesafio.textColor = [UIColor blackColor];
     
     self.progresso = 0.0;
     self.afinador = [[Afinador alloc]init];
-    
+
     self.contadorCiclosAnimacao = 0;
     
     [self audioManagerIniciate];
@@ -287,11 +282,8 @@
 }
 
 - (void) atualizaTela{
-    self.notaDesafio.text = self.notaCorrente.nome;
     self.notaTocada.text = self.afinador.notaAtual;
-    
-
-   // [self rotinaJogo];
+   
 }
 
 
