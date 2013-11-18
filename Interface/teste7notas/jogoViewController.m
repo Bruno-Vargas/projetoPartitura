@@ -138,10 +138,10 @@
         
     }else{
         //passou por todas as rodas..e ganhou o jogo.. mostrar tela de parabens
-        self.vGanhouRodada.hidden = NO;
+
         self.vPerdeuRodada.hidden = YES;
         self.vCairNotas.hidden = YES;
-        
+        self.vGanhouRodada.hidden = NO;        
     }
     
 }
