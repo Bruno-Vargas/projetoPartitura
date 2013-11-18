@@ -676,20 +676,10 @@
     <resources>
         <image name="bemol.png" width="100" height="100"/>
         <image name="cifra.jpg" width="829" height="973"/>
-        <image name="cifra.jpg" width="829" height="973"/>
-        <image name="cifra.jpg" width="829" height="973"/>
-        <image name="cifra.jpg" width="829" height="973"/>
         <image name="joinhaNegativo.png" width="480" height="420"/>
         <image name="joinhaPositivo.png" width="480" height="420"/>
         <image name="minima.png" width="1000" height="1000"/>
         <image name="piso-3d-preto-black-1358783505.jpg" width="1024" height="768"/>
-        <image name="piso-3d-preto-black-1358783505.jpg" width="1024" height="768"/>
-        <image name="piso-3d-preto-black-1358783505.jpg" width="1024" height="768"/>
-        <image name="piso-3d-preto-black-1358783505.jpg" width="1024" height="768"/>
-        <image name="piso-3d-preto-black-1358783505.jpg" width="1024" height="768"/>
-        <image name="red-24819_640.png" width="640" height="320"/>
-        <image name="red-24819_640.png" width="640" height="320"/>
-        <image name="red-24819_640.png" width="640" height="320"/>
         <image name="red-24819_640.png" width="640" height="320"/>
         <image name="regua.png" width="110" height="1007"/>
         <image name="sustenido.png" width="100" height="100"/>

@@ -131,10 +131,17 @@
     self.qtdeRodadas++;
     
     
-    if(self.qtdeRodadas < 1){
+    if(self.qtdeRodadas < 5){
+        
+        self.vPerdeuRodada.hidden = YES;
+        self.vCairNotas.hidden = YES;
+        self.vGanhouRodada.hidden = NO;
+    
+        
+        [self performSelector:@selector(acaoComecarJogo) withObject:nil afterDelay:1.0];
         
         //iniciar nova rodada
-        [self acaoComecarJogo];
+//        [self acaoComecarJogo];
         
     }else{
         //passou por todas as rodas..e ganhou o jogo.. mostrar tela de parabens
